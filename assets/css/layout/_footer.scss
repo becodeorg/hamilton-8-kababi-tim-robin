@@ -5,17 +5,136 @@ footer {
 	align-items: center;
 	justify-content: center;
 	gap: 5vh;
+	background-color: $background;
+	color: hsla(0, 0%, 100%, 0.5);
+	padding: 5vh 10vw;
 	
 	article {
 		width: 100%;
-		@include flexRowCenterSpaceBetween();
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
 		gap: 5vw;
-		padding: 2vh 5vw;
+		padding: 2vh 0;
 		
-		&:last-child {
+		p, li {
+			font-size: 0.8em;
+		}
+		
+		ul {
+			display: flex;
+			flex-direction: column;
+			gap: 0.7em;
+			padding: 0 2em;
+			
+			li {
+				line-height: 2em;
+				
+				h3 {
+					font-size: 1.7em;
+					margin-bottom: 0.5em;
+					color: $white;
+				}
+				
+				address {
+					display: flex;
+					flex-direction: column;
+					gap: 1em;
+					font-style: normal;
+					
+					a {
+						color: hsla(0, 0%, 100%, 0.5);
+					}
+				}
+			}
+			
+			&:nth-child(3) {
+				width: 25%;
+				
+				li:last-child {
+					@include flexRowCenter();
+					
+					input {
+						width: 85%;
+						background: $white;
+						color: $background;
+						padding: 1.5rem;
+						font-size: 1.3em;
+					}
+					
+					button {
+						padding: 1.5rem;
+						background: $aHoverBackground;
+						
+						i {
+							font-size: 1.5em;
+							color: $white;
+						}
+					}
+				}
+			}
+			
+			&:nth-child(4) {
+				width: 20%;
+				
+				i {
+					color: $aHoverBackground;
+					margin-right: 1.5em;
+				}
+			}
+		}
+		
+		&:first-child {
 			
 			ul {
 				
+				li:first-child {
+					margin-bottom: 0.5em;
+				}
+			}
+		}
+		
+		&:last-child {
+			@include flexRowCenterSpaceBetween();
+			
+			div {
+				@include flexRowCenter();
+				
+				p {
+					
+					em {
+						font-style: normal;
+						color: $aHoverBackground;
+					}
+				}
+				
+				figure {
+					margin-left: 1em;
+					
+					img {
+						width: 4em;
+					}
+				}
+			}
+		
+			ul {
+				@include flexRowCenter();
+				gap: 0.5em;
+				width: auto;
+				
+				li {
+					
+					i {
+						@include flexRowCenter();
+						width: 2em;
+						aspect-ratio: 1 / 1;
+						background: hsla(0, 0%, 100%, 0.1);
+						border-radius: 50px;
+						
+						&:hover {
+							background: $aHoverBackground;
+						}
+					}
+				}
 			}
 		}
 	}

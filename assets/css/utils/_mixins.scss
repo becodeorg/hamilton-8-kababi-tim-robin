@@ -1,25 +1,39 @@
-@mixin flexRowCenter() {
+@mixin flexRow() {
 	display: flex;
+	flex-direction: row;
+}
+
+@mixin flexColumn() {
+	display: flex;
+	flex-direction: column;
+}
+
+@mixin flexRowCenter() {
+	@include flexRow();
 	align-items: center;
 	justify-content: center;
 }
 
 @mixin flexColumnCenter() {
-	display: flex;
-	flex-direction: column;
+	@include flexColumn();
 	align-items: center;
 	justify-content: center;
 }
 
+@mixin flexRowCenterFlexStart() {
+	@include flexRow();
+	align-items: center;
+	justify-content: flex-start;
+}
+
 @mixin flexRowCenterSpaceBetween() {
-	display: flex;
+	@include flexRow();
 	align-items: center;
 	justify-content: space-between;
 }
 
 @mixin flexColumnCenterSpaceBetween() {
-	display: flex;
-	flex-direction: column;
+	@include flexColumn();
 	align-items: center;
 	justify-content: space-between;
 }

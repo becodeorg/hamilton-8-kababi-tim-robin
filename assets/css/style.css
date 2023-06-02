@@ -5,7 +5,18 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  border: 1px solid red;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+input, button {
+  border: none;
 }
 
 p, a, li {
@@ -34,23 +45,27 @@ header article:nth-child(1) {
   /* display: grid;
   grid-template-columns: 1fr 0.5fr 2fr 0.5fr 2fr; */
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
 }
 header article:nth-child(1) h2 {
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
 }
 header article:nth-child(1) menu {
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
 }
 header article:nth-child(1) menu li {
   padding: 0 1em;
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
 }
@@ -63,6 +78,7 @@ header article:nth-child(1) menu li a:hover {
 }
 header article:nth-child(1) div {
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
 }
@@ -119,6 +135,30 @@ body {
   min-height: 100vh;
 }
 
+section {
+  width: 100%;
+}
+section:nth-child(1) {
+  background-image: url("../img/banner/imgbgcategory.png");
+  background-color: #faf6f0;
+  background-position: top;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10vh;
+  padding: 5vh 10vw;
+}
+section:nth-child(1) article {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+}
+section:nth-child(1) article a {
+  background: #fefefe;
+}
+
 footer {
   width: 100%;
   display: flex;
@@ -126,14 +166,119 @@ footer {
   align-items: center;
   justify-content: center;
   gap: 5vh;
+  background-color: #090d0f;
+  color: hsla(0, 0%, 100%, 0.5);
+  padding: 5vh 10vw;
 }
 footer article {
   width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 5vw;
+  padding: 2vh 0;
+}
+footer article p, footer article li {
+  font-size: 0.8em;
+}
+footer article ul {
   display: flex;
+  flex-direction: column;
+  gap: 0.7em;
+  padding: 0 2em;
+}
+footer article ul li {
+  line-height: 2em;
+}
+footer article ul li h3 {
+  font-size: 1.7em;
+  margin-bottom: 0.5em;
+  color: #FFF;
+}
+footer article ul li address {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  font-style: normal;
+}
+footer article ul li address a {
+  color: hsla(0, 0%, 100%, 0.5);
+}
+footer article ul:nth-child(3) {
+  width: 25%;
+}
+footer article ul:nth-child(3) li:last-child {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+footer article ul:nth-child(3) li:last-child input {
+  width: 85%;
+  background: #FFF;
+  color: #090d0f;
+  padding: 1.5rem;
+  font-size: 1.3em;
+}
+footer article ul:nth-child(3) li:last-child button {
+  padding: 1.5rem;
+  background: #c8a96a;
+}
+footer article ul:nth-child(3) li:last-child button i {
+  font-size: 1.5em;
+  color: #FFF;
+}
+footer article ul:nth-child(4) {
+  width: 20%;
+}
+footer article ul:nth-child(4) i {
+  color: #c8a96a;
+  margin-right: 1.5em;
+}
+footer article:first-child ul li:first-child {
+  margin-bottom: 0.5em;
+}
+footer article:last-child {
+  display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  gap: 5vw;
-  padding: 2vh 5vw;
+}
+footer article:last-child div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+footer article:last-child div p em {
+  font-style: normal;
+  color: #c8a96a;
+}
+footer article:last-child div figure {
+  margin-left: 1em;
+}
+footer article:last-child div figure img {
+  width: 4em;
+}
+footer article:last-child ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+  width: auto;
+}
+footer article:last-child ul li i {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 2em;
+  aspect-ratio: 1/1;
+  background: hsla(0, 0%, 100%, 0.1);
+  border-radius: 50px;
+}
+footer article:last-child ul li i:hover {
+  background: #c8a96a;
 }
 
 /*# sourceMappingURL=style.css.map */
