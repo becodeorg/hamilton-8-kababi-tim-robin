@@ -31,6 +31,7 @@ header {
 
             li {
                 padding: 0 1em;
+                @include flexRowCenter();
 
                 a {
                     @include flexRowCenter();

@@ -73,6 +73,10 @@ header article:nth-child(1) menu {
 }
 header article:nth-child(1) menu li {
   padding: 0 1em;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 header article:nth-child(1) menu li a {
   display: flex;
