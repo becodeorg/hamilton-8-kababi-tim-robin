@@ -34,6 +34,30 @@ body {
   min-height: 100vh;
 }
 
+section {
+  width: 100%;
+}
+section:nth-child(1) {
+  background-image: url("../img/banner/imgbgcategory.png");
+  background-color: #faf6f0;
+  background-position: top;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10vh;
+  padding: 5vh 10vw;
+}
+section:nth-child(1) article {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+}
+section:nth-child(1) article a {
+  background: #fefefe;
+}
+
 footer {
   width: 100%;
   display: flex;
@@ -47,11 +71,8 @@ footer {
 }
 footer article {
   width: 100%;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 5vw;
   padding: 2vh 0;
 }
@@ -62,7 +83,7 @@ footer article ul {
   display: flex;
   flex-direction: column;
   gap: 0.7em;
-  width: 15%;
+  padding: 0 2em;
 }
 footer article ul li {
   line-height: 2em;
@@ -92,16 +113,13 @@ footer article ul:nth-child(3) li:last-child {
 }
 footer article ul:nth-child(3) li:last-child input {
   width: 85%;
-  height: 100%;
   background: #FFF;
   color: #090d0f;
-  padding: 1em 1.5rem;
+  padding: 1.5rem;
   font-size: 1.3em;
 }
 footer article ul:nth-child(3) li:last-child button {
-  width: 15%;
-  height: 100%;
-  aspect-ratio: 1/1;
+  padding: 1.5rem;
   background: #c8a96a;
 }
 footer article ul:nth-child(3) li:last-child button i {
@@ -160,12 +178,6 @@ footer article:last-child ul li i {
 }
 footer article:last-child ul li i:hover {
   background: #c8a96a;
-}
-
-@media screen and (max-width: 815px) {
-  footer article:first-child {
-    flex-direction: column;
-  }
 }
 
 /*# sourceMappingURL=style.css.map */

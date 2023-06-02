@@ -11,8 +11,8 @@ footer {
 	
 	article {
 		width: 100%;
-		@include flexRowCenterFlexStart();
-		flex-wrap: wrap;
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
 		gap: 5vw;
 		padding: 2vh 0;
 		
@@ -24,7 +24,7 @@ footer {
 			display: flex;
 			flex-direction: column;
 			gap: 0.7em;
-			width: 15%;
+			padding: 0 2em;
 			
 			li {
 				line-height: 2em;
@@ -55,17 +55,14 @@ footer {
 					
 					input {
 						width: 85%;
-						height: 100%;
 						background: $white;
 						color: $background;
-						padding: 1em 1.5rem;
+						padding: 1.5rem;
 						font-size: 1.3em;
 					}
 					
 					button {
-						width: 15%;
-						height: 100%;
-						aspect-ratio: 1 / 1;
+						padding: 1.5rem;
 						background: $aHoverBackground;
 						
 						i {
@@ -139,15 +136,6 @@ footer {
 					}
 				}
 			}
-		}
-	}
-}
-
-@media screen and (max-width: 815px) {
-	footer {
-		
-		article:first-child {
-			flex-direction: column;
 		}
 	}
 }

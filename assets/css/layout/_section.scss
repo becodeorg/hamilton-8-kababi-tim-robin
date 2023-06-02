@@ -1,0 +1,23 @@
+section {
+	width: 100%;
+	
+	&:nth-child(1) {
+		background-image: url("../img/banner/imgbgcategory.png");
+		background-color: $backgroundSection;
+		background-position: top;
+		background-repeat: no-repeat;
+		@include flexColumnCenter();
+		gap: 10vh;
+		padding: 5vh 10vw;
+		
+		article {
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+			grid-template-rows: 1fr;
+			
+			a {
+				background: $backgroundCategory;
+			}
+		}
+	}
+}
