@@ -1,0 +1,21 @@
+/* import google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;900&display=swap");
+/* import dossier base */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 1px solid red;
+}
+
+p, a, li {
+  font-family: "Helvetica", sans-serif;
+}
+
+h1, h2, h3, section:first-child article a {
+  font-family: "Playfair Display", serif;
+}
+
+/* @import dossier */
+
+/*# sourceMappingURL=style.css.map */
