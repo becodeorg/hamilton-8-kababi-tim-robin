@@ -48,63 +48,124 @@ footer {
 footer article {
   width: 100%;
   display: flex;
+  flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
+  flex-wrap: wrap;
   gap: 5vw;
   padding: 2vh 0;
+}
+footer article p, footer article li {
+  font-size: 0.8em;
 }
 footer article ul {
   display: flex;
   flex-direction: column;
-  gap: 1em;
+  gap: 0.7em;
   width: 15%;
 }
 footer article ul li {
-  font-size: 0.8em;
+  line-height: 2em;
 }
 footer article ul li h3 {
   font-size: 1.7em;
+  margin-bottom: 0.5em;
   color: #FFF;
 }
 footer article ul li address {
   display: flex;
   flex-direction: column;
   gap: 1em;
+  font-style: normal;
 }
 footer article ul li address a {
   color: hsla(0, 0%, 100%, 0.5);
 }
-footer article ul li:first-child {
-  margin-bottom: 0.5em;
-}
 footer article ul:nth-child(3) {
-  width: 45%;
+  width: 25%;
 }
-footer article ul:nth-child(3) input {
-  width: 80%;
+footer article ul:nth-child(3) li:last-child {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+footer article ul:nth-child(3) li:last-child input {
+  width: 85%;
   height: 100%;
   background: #FFF;
   color: #090d0f;
+  padding: 1em 1.5rem;
+  font-size: 1.3em;
 }
-footer article ul:nth-child(3) button {
-  width: 20%;
+footer article ul:nth-child(3) li:last-child button {
+  width: 15%;
+  height: 100%;
   aspect-ratio: 1/1;
   background: #c8a96a;
 }
-footer article ul:nth-child(3) button i {
-  font-size: 3em;
+footer article ul:nth-child(3) li:last-child button i {
+  font-size: 1.5em;
   color: #FFF;
 }
 footer article ul:nth-child(4) {
-  width: 25%;
+  width: 20%;
 }
-footer article:last-child figure img {
-  width: 3em;
+footer article ul:nth-child(4) i {
+  color: #c8a96a;
+  margin-right: 1.5em;
+}
+footer article:first-child ul li:first-child {
+  margin-bottom: 0.5em;
+}
+footer article:last-child {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+footer article:last-child div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+footer article:last-child div p em {
+  font-style: normal;
+  color: #c8a96a;
+}
+footer article:last-child div figure {
+  margin-left: 1em;
+}
+footer article:last-child div figure img {
+  width: 4em;
 }
 footer article:last-child ul {
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
+  gap: 0.5em;
+  width: auto;
+}
+footer article:last-child ul li i {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 2em;
+  aspect-ratio: 1/1;
+  background: hsla(0, 0%, 100%, 0.1);
+  border-radius: 50px;
+}
+footer article:last-child ul li i:hover {
+  background: #c8a96a;
+}
+
+@media screen and (max-width: 815px) {
+  footer article:first-child {
+    flex-direction: column;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

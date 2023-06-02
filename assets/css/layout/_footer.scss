@@ -11,21 +11,27 @@ footer {
 	
 	article {
 		width: 100%;
-		@include flexRowCenterSpaceBetween();
+		@include flexRowCenterFlexStart();
+		flex-wrap: wrap;
 		gap: 5vw;
 		padding: 2vh 0;
+		
+		p, li {
+			font-size: 0.8em;
+		}
 		
 		ul {
 			display: flex;
 			flex-direction: column;
-			gap: 1em;
+			gap: 0.7em;
 			width: 15%;
 			
 			li {
-				font-size: 0.8em;
+				line-height: 2em;
 				
 				h3 {
 					font-size: 1.7em;
+					margin-bottom: 0.5em;
 					color: $white;
 				}
 				
@@ -33,56 +39,115 @@ footer {
 					display: flex;
 					flex-direction: column;
 					gap: 1em;
+					font-style: normal;
 					
 					a {
 						color: hsla(0, 0%, 100%, 0.5);
 					}
 				}
-				
-				&:first-child {
-					margin-bottom: 0.5em;
-				}
 			}
 			
 			&:nth-child(3) {
-				width: 45%;
+				width: 25%;
 				
-				input {
-					width: 80%;
-					height: 100%;
-					background: $white;
-					color: $background;
-				}
-				
-				button {
-					width: 20%;
-					aspect-ratio: 1 / 1;
-					background: $aHoverBackground;
+				li:last-child {
+					@include flexRowCenter();
 					
-					i {
-						font-size: 3em;
-						color: $white;
+					input {
+						width: 85%;
+						height: 100%;
+						background: $white;
+						color: $background;
+						padding: 1em 1.5rem;
+						font-size: 1.3em;
+					}
+					
+					button {
+						width: 15%;
+						height: 100%;
+						aspect-ratio: 1 / 1;
+						background: $aHoverBackground;
+						
+						i {
+							font-size: 1.5em;
+							color: $white;
+						}
 					}
 				}
 			}
 			
 			&:nth-child(4) {
-				width: 25%;
+				width: 20%;
+				
+				i {
+					color: $aHoverBackground;
+					margin-right: 1.5em;
+				}
+			}
+		}
+		
+		&:first-child {
+			
+			ul {
+				
+				li:first-child {
+					margin-bottom: 0.5em;
+				}
 			}
 		}
 		
 		&:last-child {
+			@include flexRowCenterSpaceBetween();
 			
-			figure {
+			div {
+				@include flexRowCenter();
 				
-				img {
-					width: 3em;
+				p {
+					
+					em {
+						font-style: normal;
+						color: $aHoverBackground;
+					}
+				}
+				
+				figure {
+					margin-left: 1em;
+					
+					img {
+						width: 4em;
+					}
 				}
 			}
-			
+		
 			ul {
 				@include flexRowCenter();
+				gap: 0.5em;
+				width: auto;
+				
+				li {
+					
+					i {
+						@include flexRowCenter();
+						width: 2em;
+						aspect-ratio: 1 / 1;
+						background: hsla(0, 0%, 100%, 0.1);
+						border-radius: 50px;
+						
+						&:hover {
+							background: $aHoverBackground;
+						}
+					}
+				}
 			}
+		}
+	}
+}
+
+@media screen and (max-width: 815px) {
+	footer {
+		
+		article:first-child {
+			flex-direction: column;
 		}
 	}
 }
