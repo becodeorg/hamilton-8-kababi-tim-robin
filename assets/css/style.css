@@ -244,6 +244,7 @@ body > main > section:nth-child(3) > article > div #price {
 #menu > div > p {
   text-align: left;
   width: 100%;
+  font-size: 0.7rem;
 }
 
 body > main > section:nth-child(3) > p:nth-child(4) {
