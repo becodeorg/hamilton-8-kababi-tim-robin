@@ -8,4 +8,4 @@
 @import "utils/_variables.scss", "utils/_mixins.scss";
 
 /* import dossier layout */
-@import "layout/_body.scss", "layout/_footer.scss";
+@import "layout/header", "layout/_body.scss", "layout/_footer.scss";

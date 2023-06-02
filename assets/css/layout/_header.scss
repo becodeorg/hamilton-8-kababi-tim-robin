@@ -1,0 +1,111 @@
+
+
+header {
+    max-width: 2561px;
+    max-height: 13233px;
+    width: 100vw;
+    height: 100vh;
+/*     background-color: $background;
+ */ background: no-repeat bottom url("./../img/slider/img_bg_slider_home01.jpg");
+    padding: 3em 5vw;
+
+    /* NAVBAR */
+
+    article:nth-child(1) {
+        /* display: grid;
+        grid-template-columns: 1fr 0.5fr 2fr 0.5fr 2fr; */
+        @include flexRowCenterSpaceBetween;
+        flex-wrap: wrap;
+
+        h2 {
+            @include flexRowCenter;
+        }
+
+        menu {
+            @include flexRowCenter;
+            
+
+            li {
+                padding: 0 1em;
+                @include flexRowCenter;
+
+                a {
+                    color: #fff;
+                    text-decoration: none;
+                }
+
+                a:hover {
+                    color: $aHover;
+                }
+            }
+        }
+
+        div {
+            @include flexRowCenter;
+
+            a:nth-child(1) {
+                color: #fff;
+                text-decoration: none;
+                margin-right: 1em; 
+
+             }
+            a:nth-child(2) {
+                color: #fff;
+                background-color: $aHover;
+                padding: 1.5em 2em 1.5em 2.5em;
+                border-radius: 5%; 
+                text-decoration: none;
+                margin-left: 1em; 
+                i {
+                    margin-left: 1rem;
+                }
+             }
+        }
+    }
+    
+    /* TITLE */
+
+    article:nth-child(2) {
+        
+        width: calc(100% - 10rem);
+        margin-top: 5em;
+        margin-left: 10vw;
+        
+
+        div {
+            position: relative;
+
+            h1 {
+                font-size: 6em;
+                color: #fff;
+                margin-bottom: 2rem;
+                text-align: left;
+                
+            }
+
+            figure {
+                position: absolute;
+                top: 0;
+                left: 20vw;
+
+                width: auto;
+                height: 16px ;
+
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+
+            a {
+                color: #fff;
+                padding: 1em 2em;
+                border: 1px solid #ffffff7c;
+                border-radius: 5%;
+                
+            }
+        }
+    }
+
+}
+
