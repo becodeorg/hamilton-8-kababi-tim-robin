@@ -1,6 +1,7 @@
 p, a, li {
 	font-family: "Helvetica", sans-serif;
 }
-h1, h2, h3, section:first-child article a {
+h1, h2, h3, section:first-child article a, section p:last-child {
 	font-family: 'Playfair Display', serif;
+	font-weight: 400;
 }

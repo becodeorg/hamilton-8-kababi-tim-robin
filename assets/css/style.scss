@@ -4,5 +4,8 @@
 /* import dossier base */
 @import "base/_resets.scss", "base/_fonts.scss";
 
-/* @import dossier */
-@import "utils/_variables.scss";
+/* import dossier utils */
+@import "utils/_variables.scss", "utils/_mixins.scss";
+
+/* import dossier layout */
+@import "layout/_body.scss", "layout/_footer.scss";

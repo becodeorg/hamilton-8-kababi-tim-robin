@@ -1,0 +1,25 @@
+@mixin flexRowCenter() {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+@mixin flexColumnCenter() {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+@mixin flexRowCenterSpaceBetween() {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+@mixin flexColumnCenterSpaceBetween() {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+}
