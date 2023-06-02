@@ -5,17 +5,83 @@ footer {
 	align-items: center;
 	justify-content: center;
 	gap: 5vh;
+	background-color: $background;
+	color: hsla(0, 0%, 100%, 0.5);
+	padding: 5vh 10vw;
 	
 	article {
 		width: 100%;
 		@include flexRowCenterSpaceBetween();
 		gap: 5vw;
-		padding: 2vh 5vw;
+		padding: 2vh 0;
+		
+		ul {
+			display: flex;
+			flex-direction: column;
+			gap: 1em;
+			width: 15%;
+			
+			li {
+				font-size: 0.8em;
+				
+				h3 {
+					font-size: 1.7em;
+					color: $white;
+				}
+				
+				address {
+					display: flex;
+					flex-direction: column;
+					gap: 1em;
+					
+					a {
+						color: hsla(0, 0%, 100%, 0.5);
+					}
+				}
+				
+				&:first-child {
+					margin-bottom: 0.5em;
+				}
+			}
+			
+			&:nth-child(3) {
+				width: 45%;
+				
+				input {
+					width: 80%;
+					height: 100%;
+					background: $white;
+					color: $background;
+				}
+				
+				button {
+					width: 20%;
+					aspect-ratio: 1 / 1;
+					background: $aHoverBackground;
+					
+					i {
+						font-size: 3em;
+						color: $white;
+					}
+				}
+			}
+			
+			&:nth-child(4) {
+				width: 25%;
+			}
+		}
 		
 		&:last-child {
 			
-			ul {
+			figure {
 				
+				img {
+					width: 3em;
+				}
+			}
+			
+			ul {
+				@include flexRowCenter();
 			}
 		}
 	}
