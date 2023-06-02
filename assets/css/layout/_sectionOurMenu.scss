@@ -1,0 +1,118 @@
+body > main > section:nth-child(3) {
+    width: 100vw;
+    height: 100vh;
+    background-color: #faf6f0;
+    position: relative;
+    
+
+    h2 {
+
+        text-align: center;
+        font-size: 2em;
+        margin-bottom: 2rem;
+        padding-top: 7rem;
+        
+    }
+    
+    
+    p {
+        text-align: center;
+        font-size: 1em;
+        color: rgb(90, 90, 90);
+    }
+
+    article {
+
+        width: 80%;
+        height: 50%;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin: auto;
+        z-index: 10;
+        position: relative;
+        top: 10%;
+        }
+
+    
+    #menu {
+
+    border: 2px dashed transparent;
+    display: flex;
+    flex-wrap: nowrap;
+
+        &:hover {
+            border: 2px dashed $aHover;
+        }
+    }
+    /* PAIN */
+    figure:nth-child(6) {
+
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: auto;
+        height: 100vh;
+        z-index: 0;
+
+        img {
+            width: auto;
+            height: 100vh;
+            z-index: -1;
+        }
+    }
+    /* STEAK  */
+    figure:nth-child(7) {
+
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: auto;
+        height: 50vh;
+        z-index: 0;
+
+        img {
+            width: auto;
+            height: 100vh;
+            z-index: -1;
+        }
+    }
+}
+
+
+body > main > section:nth-child(3) > article > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 492px;
+    padding: 0 2rem;
+    background-color: #fff;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    
+    
+
+    #price {
+        margin-left: 3em;
+        font-size: 2em;
+        color: $aHover;
+    }
+}
+
+#menu > div > p {
+    text-align: left;
+    width: 100%;
+    
+}
+
+
+
+body > main > section:nth-child(3) > p:nth-child(4) {
+    position: absolute;
+    font-size: 10rem;
+    z-index: 0;
+    top: 0.1em;
+    left: 0.1em;
+    color: #ffebc4ab;
+    font-family: 'Playfair Display', serif; 
+}
