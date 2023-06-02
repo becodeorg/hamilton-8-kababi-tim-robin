@@ -1,23 +1,69 @@
+@font-face {
+	font-family: "flaticon";
+	src: url("../font/flaticon.ttf");
+}
+
 section {
 	width: 100%;
+	position: relative;
 	
 	&:nth-child(1) {
-		background-image: url("../img/banner/imgbgcategory.png");
-		background-color: $backgroundSection;
-		background-position: top;
-		background-repeat: no-repeat;
+		background: $backgroundSection url("../img/banner/imgbgcategory.jpg") top no-repeat;
 		@include flexColumnCenter();
-		gap: 10vh;
-		padding: 5vh 10vw;
+		padding: 15vh 5vw 35vh 5vw;
+		
+		h2 {
+			margin-bottom: 0.5em;
+			
+			&~p {
+				margin-bottom: 10em;
+				font-weight: 200;
+			}
+		}
 		
 		article {
-			display: grid;
-			grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-			grid-template-rows: 1fr;
+			width: 100%;
+			@include flexRowCenter();
+			flex-wrap: wrap;
+			gap: 2em;
+			position: relative;
+			z-index: 10;
 			
 			a {
+				width: 180px;
+				min-height: 205px;
+				padding: 1em 0.5em;
 				background: $backgroundCategory;
+				@include flexColumnCenter();
+				gap: 1em;
+				color: $textCategory;
+				transition: all .3s ease;
+				font-size: 1.2em;
+				
+				i:first-child {
+					font-size: 2.5rem;
+					color: $aHover;
+					transition: all .3s ease;
+				}
+				
+				&:hover {
+					background: $aHover;
+					color: $white;
+					
+					i {
+						color: $white;
+					}
+				}
 			}
+		}
+		
+		p:last-child {
+			position: absolute;
+			z-index: 1;
+			top: 5vh;
+			left: 0;
+			font-size: 10em;
+			color: hsla(40, 46%, 60%, 0.2);
 		}
 	}
 }
