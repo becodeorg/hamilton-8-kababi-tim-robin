@@ -86,7 +86,7 @@ header article:nth-child(1) menu li a i {
   margin-left: 0.5em;
 }
 header article:nth-child(1) menu li a:hover {
-  color: #c8a96a;
+  color: #c7a86a;
 }
 header article:nth-child(1) div {
   display: flex;
@@ -97,25 +97,27 @@ header article:nth-child(1) div {
 header article:nth-child(1) div a:nth-child(1) {
   color: #fff;
   text-decoration: none;
-  margin-right: 1em;
+  margin-right: 3em;
 }
 header article:nth-child(1) div a:nth-child(2) {
   color: #fff;
-  background-color: #c8a96a;
-  padding: 1.5em 2em 1.5em 2.5em;
+  background-color: #c7a86a;
   border-radius: 5px;
   text-decoration: none;
-  margin-left: 1em;
+  padding: 1.5em 2.5em;
+  font-size: 0.8em;
+  font-weight: 800;
+  transition: all 0.3s ease;
 }
 header article:nth-child(1) div a:nth-child(2) i {
   margin-left: 1rem;
 }
 header article:nth-child(1) div a:nth-child(2):hover {
   background: #FFF;
-  color: #c8a96a;
+  color: #c7a86a;
 }
 header article:nth-child(1) div a:nth-child(2):hover i {
-  color: #c8a96a;
+  color: #c7a86a;
 }
 header article:nth-child(2) {
   width: calc(100% - 10rem);
@@ -157,6 +159,201 @@ body {
   min-height: 100vh;
 }
 
+section:nth-child(5) {
+  background: #090d0f;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20vh 0;
+}
+section:nth-child(5) h2, section:nth-child(5) p {
+  color: #FFF;
+}
+section:nth-child(5) h2 {
+  margin-bottom: 2vh;
+}
+section:nth-child(5) article {
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2em;
+  margin-top: 10vh;
+}
+section:nth-child(5) article figure img {
+  width: 220px;
+}
+
+section:nth-child(4) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 30;
+  padding: 20vh 0;
+}
+section:nth-child(4) article {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 2em;
+  margin-top: 20vh;
+  margin-bottom: 10vh;
+}
+section:nth-child(4) article figure {
+  position: relative;
+}
+section:nth-child(4) article figure img {
+  position: relative;
+  z-index: 30;
+}
+section:nth-child(4) article figure div {
+  width: 100%;
+  height: 400px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 30;
+  transition: all 0.5s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+section:nth-child(4) article figure div i, section:nth-child(4) article figure div h3, section:nth-child(4) article figure div p {
+  position: absolute;
+  color: #FFF;
+  transition: all 0.5s ease;
+  opacity: 0;
+}
+section:nth-child(4) article figure div i {
+  top: 2em;
+  right: 2em;
+  font-size: 1.3em;
+  z-index: 35;
+}
+section:nth-child(4) article figure div h3 {
+  bottom: 40%;
+  font-size: 1.6em;
+  z-index: 40;
+}
+section:nth-child(4) article figure div p {
+  bottom: 35%;
+  font-size: 0.9em;
+  z-index: 45;
+}
+section:nth-child(4) article figure div:hover {
+  background-color: hsla(0, 0%, 13%, 0.8);
+}
+section:nth-child(4) article figure div:hover i, section:nth-child(4) article figure div:hover h3, section:nth-child(4) article figure div:hover p {
+  opacity: 1;
+}
+section:nth-child(4) article figure:nth-child(1) {
+  grid-column: 1/span 2;
+}
+section:nth-child(4) article figure:nth-child(6) {
+  grid-column: 3/span 2;
+}
+section:nth-child(4) a {
+  color: #202020;
+  border: 2px solid hsla(0, 0%, 13%, 0.1);
+  padding: 1em 1.5em;
+  transition: all 0.3s ease;
+}
+section:nth-child(4) a i {
+  color: #202020;
+  margin-left: 1em;
+}
+section:nth-child(4) a:hover {
+  border-color: #202020;
+}
+
+section:nth-child(2) {
+  height: 185vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding-bottom: 15vh;
+}
+section:nth-child(2) h2 {
+  margin-bottom: 0.5em;
+}
+section:nth-child(2) div:first-child {
+  position: absolute;
+  top: -20vh;
+  left: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+section:nth-child(2) div:first-child figure:nth-child(1) img {
+  width: 15vw;
+}
+section:nth-child(2) div:first-child figure:nth-child(3) img {
+  width: 20vw;
+}
+section:nth-child(2) div:first-child figure:nth-child(2) img {
+  border-radius: 500px;
+  border: 2em solid #FFF;
+}
+section:nth-child(2) figure:nth-child(4) {
+  position: absolute;
+  right: 10vw;
+  bottom: 85vh;
+}
+section:nth-child(2) div:nth-child(5) {
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 5em;
+  margin-top: 15vh;
+}
+section:nth-child(2) div:nth-child(5) article {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 2em;
+}
+section:nth-child(2) div:nth-child(5) article p {
+  font-size: 1.6em;
+  font-family: "Playfair Display", serif;
+  letter-spacing: 0.05em;
+  line-height: 2.2em;
+}
+section:nth-child(2) div:nth-child(5) article a {
+  padding: 1.5em 2.5em;
+  background: #c7a86a;
+  color: #FFF;
+  border-radius: 5px;
+  font-size: 0.8em;
+  font-weight: 800;
+  transition: all 0.3s ease;
+}
+section:nth-child(2) div:nth-child(5) article a i {
+  color: #FFF;
+  margin-left: 0.5em;
+}
+section:nth-child(2) div:nth-child(5) article a:hover {
+  background: hsla(40, 46%, 60%, 0.5);
+}
+section:nth-child(2) > p:last-child {
+  top: unset;
+  bottom: 85vh;
+}
+
 @font-face {
   font-family: "flaticon";
   src: url("../font/flaticon.ttf");
@@ -165,8 +362,18 @@ section {
   width: 100%;
   position: relative;
 }
+section > p:last-child {
+  position: absolute !important;
+  z-index: 1;
+  top: 5vh;
+  left: 0;
+  font-size: 11em !important;
+  color: hsla(40, 46%, 60%, 0.2) !important;
+}
 section:nth-child(1) {
-  background: #faf6f0 url("../img/banner/imgbgcategory.jpg") top no-repeat;
+  /*background: $backgroundSection url("../img/banner/imgbgcategory.jpg") top no-repeat;*/
+  background: #faf6f0;
+  mix-blend-mode: multiply;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -207,23 +414,15 @@ section:nth-child(1) article a {
 }
 section:nth-child(1) article a i:first-child {
   font-size: 2.5rem;
-  color: #c8a96a;
+  color: #c7a86a;
   transition: all 0.3s ease;
 }
 section:nth-child(1) article a:hover {
-  background: #c8a96a;
+  background: #c7a86a;
   color: #FFF;
 }
 section:nth-child(1) article a:hover i {
   color: #FFF;
-}
-section:nth-child(1) p:last-child {
-  position: absolute;
-  z-index: 1;
-  top: 5vh;
-  left: 0;
-  font-size: 10em;
-  color: hsla(40, 46%, 60%, 0.2);
 }
 
 body > main > section:nth-child(3) {
@@ -239,11 +438,15 @@ body > main > section:nth-child(3) h2 {
   font-size: 2em;
   margin-bottom: 2rem;
   padding-top: 7rem;
+  position: relative;
+  z-index: 2;
 }
 body > main > section:nth-child(3) p {
   text-align: center;
+  position: relative;
   font-size: 1em;
   color: rgb(90, 90, 90);
+  z-index: 3;
 }
 body > main > section:nth-child(3) article {
   width: 80%;
@@ -262,9 +465,9 @@ body > main > section:nth-child(3) #menu {
   flex-wrap: nowrap;
 }
 body > main > section:nth-child(3) #menu:hover {
-  border: 2px dashed #c8a96a;
+  border: 2px dashed #c7a86a;
 }
-body > main > section:nth-child(3) figure:nth-child(6) {
+body > main > section:nth-child(3) figure:nth-child(5) {
   position: absolute;
   top: 0;
   right: 0;
@@ -272,22 +475,22 @@ body > main > section:nth-child(3) figure:nth-child(6) {
   height: 100vh;
   z-index: 0;
 }
-body > main > section:nth-child(3) figure:nth-child(6) img {
+body > main > section:nth-child(3) figure:nth-child(5) img {
   width: auto;
   height: 100vh;
   z-index: -1;
 }
-body > main > section:nth-child(3) figure:nth-child(7) {
+body > main > section:nth-child(3) figure:nth-child(4) {
   position: absolute;
-  bottom: 0;
-  right: 0;
+  bottom: -10vh;
+  left: 0;
   width: auto;
   height: 50vh;
   z-index: 0;
 }
-body > main > section:nth-child(3) figure:nth-child(7) img {
+body > main > section:nth-child(3) figure:nth-child(4) img {
   width: auto;
-  height: 100vh;
+  height: 55vh;
   z-index: -1;
 }
 
@@ -304,7 +507,7 @@ body > main > section:nth-child(3) > article > div {
 body > main > section:nth-child(3) > article > div #price {
   margin-left: 3em;
   font-size: 2em;
-  color: #c8a96a;
+  color: #c7a86a;
 }
 
 #menu > div > p {
@@ -313,13 +516,8 @@ body > main > section:nth-child(3) > article > div #price {
   font-size: 0.7rem;
 }
 
-body > main > section:nth-child(3) > p:nth-child(4) {
-  position: absolute;
-  font-size: 10rem;
+body > main > section:nth-child(3) > p:nth-child(6) {
   z-index: 0;
-  top: 0.1em;
-  left: 0.1em;
-  color: rgba(255, 235, 196, 0.6705882353);
   font-family: "Playfair Display", serif;
 }
 

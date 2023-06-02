@@ -7,8 +7,19 @@ section {
 	width: 100%;
 	position: relative;
 	
+	&>p:last-child {
+		position: absolute!important;
+		z-index: 1;
+		top: 5vh;
+		left: 0;
+		font-size: 11em!important;
+		color: hsla(40, 46%, 60%, 0.2)!important;
+	}
+	
 	&:nth-child(1) {
-		background: $backgroundSection url("../img/banner/imgbgcategory.jpg") top no-repeat;
+		/*background: $backgroundSection url("../img/banner/imgbgcategory.jpg") top no-repeat;*/
+		background: $backgroundSection;
+		mix-blend-mode: multiply;
 		@include flexColumnCenter();
 		padding: 15vh 5vw 35vh 5vw;
 		
@@ -55,15 +66,6 @@ section {
 					}
 				}
 			}
-		}
-		
-		p:last-child {
-			position: absolute;
-			z-index: 1;
-			top: 5vh;
-			left: 0;
-			font-size: 10em;
-			color: hsla(40, 46%, 60%, 0.2);
 		}
 	}
 }

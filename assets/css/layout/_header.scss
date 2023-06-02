@@ -54,16 +54,18 @@ header {
             a:nth-child(1) {
                 color: #fff;
                 text-decoration: none;
-                margin-right: 1em; 
+                margin-right: 3em;
 
              }
             a:nth-child(2) {
                 color: #fff;
                 background-color: $aHover;
-                padding: 1.5em 2em 1.5em 2.5em;
                 border-radius: 5px; 
                 text-decoration: none;
-                margin-left: 1em;
+                padding: 1.5em 2.5em;
+                font-size: 0.8em;
+                font-weight: 800;
+                transition: all .3s ease;
                 
                 i {
                     margin-left: 1rem;
@@ -129,4 +131,3 @@ header {
     }
 
 }
-

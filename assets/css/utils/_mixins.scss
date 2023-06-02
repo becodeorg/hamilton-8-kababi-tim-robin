@@ -26,6 +26,12 @@
 	justify-content: flex-start;
 }
 
+@mixin flexColumnCenterFlexStart() {
+	@include flexColumn();
+	align-items: flex-start;
+	justify-content: center;
+}
+
 @mixin flexRowCenterSpaceBetween() {
 	@include flexRow();
 	align-items: center;
@@ -36,4 +42,10 @@
 	@include flexColumn();
 	align-items: center;
 	justify-content: space-between;
+}
+
+@mixin positioning($bottom, $fontSize, $zIndex) {
+	bottom: $bottom;
+	font-size: $fontSize;
+	z-index: $zIndex;
 }
