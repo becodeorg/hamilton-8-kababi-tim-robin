@@ -1,5 +1,5 @@
 section:nth-child(2) {
-	height: 185vh;
+	min-height: 100vh;
 	position: relative;
 	@include flexColumn();
 	align-items: center;
@@ -8,11 +8,12 @@ section:nth-child(2) {
 	
 	h2 {
 		margin-bottom: 0.5em;
+		margin-top: 50vw;
 	}
 	
 	div:first-child {
 		position: absolute;
-		top: -20vh;
+		top: -75px;
 		left: 0;
 		width: 100%;
 		@include flexRowCenter();
@@ -34,6 +35,8 @@ section:nth-child(2) {
 		figure:nth-child(2) {
 			
 			img {
+				
+				width: 50vw;
 				border-radius: 500px;
 				border: 2em solid $white;
 			}
@@ -44,6 +47,10 @@ section:nth-child(2) {
 		position: absolute;
 		right: 10vw;
 		bottom: 85vh;
+		
+		img {
+			width: 10vw;
+		}
 	}
 	
 	div:nth-child(5) {
@@ -52,14 +59,22 @@ section:nth-child(2) {
 		gap: 5em;
 		margin-top: 15vh;
 		
+		figure {
+			width: 30vw;
+			
+			img {
+				width: 100%;
+			}
+		}
+		
 		article {
-			width: 60%;
+			width: 50vw;
 			height: 100%;
 			@include flexColumnCenterFlexStart();
 			gap: 2em;
 			
 			p {
-				font-size: 1.6em;
+				font-size: 1.8vw;
 				font-family: 'Playfair Display', serif;
 				letter-spacing: 0.05em;
 				line-height: 2.2em;
@@ -88,6 +103,6 @@ section:nth-child(2) {
 	
 	&>p:last-child {
 		top: unset;
-		bottom: 85vh;
+		bottom: 45vw;
 	}
 }

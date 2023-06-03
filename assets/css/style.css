@@ -44,6 +44,7 @@ header {
    */
   background: no-repeat bottom url("./../img/slider/img_bg_slider_home01.jpg");
   padding: 3em 5vw;
+  position: relative;
   /* NAVBAR */
   /* TITLE */
 }
@@ -58,6 +59,7 @@ header article:nth-child(1) {
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
+  color: #c7a86a;
 }
 header article:nth-child(1) h2 {
   display: flex;
@@ -70,13 +72,17 @@ header article:nth-child(1) menu {
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  transition: all 0.3s ease;
+  transition-delay: 0.4s;
+  gap: 1em;
 }
 header article:nth-child(1) menu li {
-  padding: 0 1em;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  transition: all 0.3s ease;
+  transition-delay: 0s;
 }
 header article:nth-child(1) menu li a {
   display: flex;
@@ -97,18 +103,18 @@ header article:nth-child(1) div {
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  gap: 3em;
 }
 header article:nth-child(1) div a:nth-child(1) {
   color: #fff;
   text-decoration: none;
-  margin-right: 3em;
 }
 header article:nth-child(1) div a:nth-child(2) {
   color: #fff;
   background-color: #c7a86a;
   border-radius: 5px;
   text-decoration: none;
-  padding: 1.5em 2.5em;
+  padding: 1em 1.5em;
   font-size: 0.8em;
   font-weight: 800;
   transition: all 0.3s ease;
@@ -121,6 +127,26 @@ header article:nth-child(1) div a:nth-child(2):hover {
   color: #c7a86a;
 }
 header article:nth-child(1) div a:nth-child(2):hover i {
+  color: #c7a86a;
+}
+header article:nth-child(1) i#burger {
+  margin-left: 1em;
+  width: 2em;
+  aspect-ratio: 1/1;
+  border-radius: 5px;
+  background: #c7a86a;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5em;
+  color: #FFF;
+  transition: all 0.3s ease;
+  display: none;
+  cursor: pointer;
+}
+header article:nth-child(1) i#burger:hover {
+  background: #FFF;
   color: #c7a86a;
 }
 header article:nth-child(2) {
@@ -158,6 +184,63 @@ header article:nth-child(2) div a:hover {
   background: hsla(0, 0%, 100%, 0.4);
 }
 
+@media screen and (max-width: 1060px) {
+  header article:nth-child(1) {
+    position: relative;
+  }
+  header article:nth-child(1) menu {
+    width: 90%;
+    height: 0px;
+    background: hsla(0, 0%, 0%, 0.7);
+    position: absolute;
+    flex-direction: column;
+    top: 150px;
+    left: 5%;
+    z-index: 100;
+    gap: 3em;
+    border-radius: 5px;
+  }
+  header article:nth-child(1) menu::after {
+    content: "";
+    width: 0px;
+    aspect-ratio: 1/1;
+    border: 0px solid transparent;
+    border-right-color: hsla(0, 0%, 0%, 0.7);
+    position: absolute;
+    top: -35px;
+    right: 0;
+    transition: all 0.3s ease;
+  }
+  header article:nth-child(1) menu.display {
+    height: 500px;
+    transition-delay: 0s;
+    box-shadow: 0px 0px 5em hsla(0, 0%, 0%, 0.5);
+  }
+  header article:nth-child(1) menu.display::after {
+    border: 40px solid transparent;
+    border-right-color: hsla(0, 0%, 0%, 0.7);
+  }
+  header article:nth-child(1) menu.display li {
+    opacity: 1;
+    transition-delay: 0.4s;
+  }
+  header article:nth-child(1) menu li {
+    font-size: 2em;
+    opacity: 0;
+  }
+  header article:nth-child(1) menu li a {
+    color: #FFF;
+  }
+  header article:nth-child(1) menu li a:hover {
+    color: #c7a86a;
+  }
+  header article:nth-child(1) div {
+    gap: 1em;
+  }
+  header article:nth-child(1) i#burger {
+    display: flex;
+  }
+}
 body {
   width: 100vw;
   min-height: 100vh;
@@ -202,7 +285,7 @@ section:nth-child(4) {
 }
 section:nth-child(4) article {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(auto-fill, 1fr);
   grid-template-rows: 1fr 1fr;
   grid-gap: 2em;
   margin-top: 20vh;
@@ -277,7 +360,7 @@ section:nth-child(4) a:hover {
 }
 
 section:nth-child(2) {
-  height: 185vh;
+  min-height: 100vh;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -287,10 +370,11 @@ section:nth-child(2) {
 }
 section:nth-child(2) h2 {
   margin-bottom: 0.5em;
+  margin-top: 50vw;
 }
 section:nth-child(2) div:first-child {
   position: absolute;
-  top: -20vh;
+  top: -75px;
   left: 0;
   width: 100%;
   display: flex;
@@ -305,6 +389,7 @@ section:nth-child(2) div:first-child figure:nth-child(3) img {
   width: 20vw;
 }
 section:nth-child(2) div:first-child figure:nth-child(2) img {
+  width: 50vw;
   border-radius: 500px;
   border: 2em solid #FFF;
 }
@@ -312,6 +397,9 @@ section:nth-child(2) figure:nth-child(4) {
   position: absolute;
   right: 10vw;
   bottom: 85vh;
+}
+section:nth-child(2) figure:nth-child(4) img {
+  width: 10vw;
 }
 section:nth-child(2) div:nth-child(5) {
   width: 70%;
@@ -322,8 +410,14 @@ section:nth-child(2) div:nth-child(5) {
   gap: 5em;
   margin-top: 15vh;
 }
+section:nth-child(2) div:nth-child(5) figure {
+  width: 30vw;
+}
+section:nth-child(2) div:nth-child(5) figure img {
+  width: 100%;
+}
 section:nth-child(2) div:nth-child(5) article {
-  width: 60%;
+  width: 50vw;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -332,7 +426,7 @@ section:nth-child(2) div:nth-child(5) article {
   gap: 2em;
 }
 section:nth-child(2) div:nth-child(5) article p {
-  font-size: 1.6em;
+  font-size: 1.8vw;
   font-family: "Playfair Display", serif;
   letter-spacing: 0.05em;
   line-height: 2.2em;
@@ -355,7 +449,7 @@ section:nth-child(2) div:nth-child(5) article a:hover {
 }
 section:nth-child(2) > p:last-child {
   top: unset;
-  bottom: 85vh;
+  bottom: 45vw;
 }
 
 @font-face {
@@ -416,10 +510,8 @@ section:nth-child(1) article a {
   transition: all 0.3s ease;
   font-size: 1.2em;
 }
-section:nth-child(1) article a i:first-child {
-  font-size: 2.5rem;
-  color: #c7a86a;
-  transition: all 0.3s ease;
+section:nth-child(1) article a img {
+  width: 2em;
 }
 section:nth-child(1) article a:hover {
   background: #c7a86a;
@@ -463,12 +555,12 @@ body > main > section:nth-child(3) article {
   position: relative;
   top: 10%;
 }
-body > main > section:nth-child(3) #menu {
+body > main > section:nth-child(3) .menu {
   border: 2px dashed transparent;
   display: flex;
   flex-wrap: nowrap;
 }
-body > main > section:nth-child(3) #menu:hover {
+body > main > section:nth-child(3) .menu:hover {
   border: 2px dashed #c7a86a;
 }
 body > main > section:nth-child(3) figure:nth-child(5) {
@@ -508,13 +600,13 @@ body > main > section:nth-child(3) > article > div {
   border-radius: 5px;
   margin-bottom: 1rem;
 }
-body > main > section:nth-child(3) > article > div #price {
+body > main > section:nth-child(3) > article > div .price {
   margin-left: 3em;
   font-size: 2em;
   color: #c7a86a;
 }
 
-#menu > div > p {
+.menu > div > p {
   text-align: left;
   width: 100%;
   font-size: 0.7rem;
