@@ -59,8 +59,14 @@ header {
             gap: 3em;
 
             a:nth-child(1) {
+                @include flexRowCenter();
+                gap: 0.5em;
                 color: #fff;
                 text-decoration: none;
+                
+                img {
+                    width: 1em;
+                }
 
              }
             a:nth-child(2) {
