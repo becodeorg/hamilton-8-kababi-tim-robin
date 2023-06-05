@@ -539,9 +539,11 @@ section > p:last-child {
   color: hsla(40, 46%, 60%, 0.2) !important;
 }
 section:nth-child(1) {
-  /*background: $backgroundSection url("../img/banner/imgbgcategory.jpg") top no-repeat;*/
-  background: #faf6f0;
-  mix-blend-mode: multiply;
+  background-image: url("../img/banner/imgbgcategory.jpg");
+  background-color: #faf6f0;
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: multiply;
   display: flex;
   flex-direction: column;
   align-items: center;
