@@ -421,17 +421,17 @@ section:nth-child(4) article figure div i, section:nth-child(4) article figure d
 section:nth-child(4) article figure div i {
   top: 2em;
   right: 2em;
-  font-size: 1.3em;
+  font-size: 1.3vw;
   z-index: 35;
 }
 section:nth-child(4) article figure div h3 {
   bottom: 40%;
-  font-size: 1.6em;
+  font-size: 1.6vw;
   z-index: 40;
 }
 section:nth-child(4) article figure div p {
   bottom: 35%;
-  font-size: 0.9em;
+  font-size: 0.9vw;
   z-index: 45;
 }
 section:nth-child(4) article figure div:hover {
@@ -542,7 +542,7 @@ section:nth-child(2) div:nth-child(5) article a {
   background: #c7a86a;
   color: #FFF;
   border-radius: 5px;
-  font-size: 0.8em;
+  font-size: 0.8vw;
   font-weight: 800;
   transition: all 0.3s ease;
 }
@@ -612,7 +612,7 @@ section:nth-child(1) article a {
   gap: 1em;
   color: #202020;
   transition: all 0.3s ease;
-  font-size: 1.2em;
+  font-size: 1.2vw;
 }
 section:nth-child(1) article a:nth-child(1) span {
   display: block;
@@ -711,7 +711,7 @@ body > main > section:nth-child(3) {
   /* STEAK  */
 }
 body > main > section:nth-child(3) h2 {
-  font-size: 2em;
+  font-size: 2vw;
   margin-bottom: 2rem;
   position: relative;
   z-index: 2;
@@ -832,21 +832,21 @@ section:nth-child(6) {
 }
 section:nth-child(6) h2 {
   letter-spacing: 0.1em;
-  font-size: 3em;
+  font-size: 3vw;
   margin-top: 10vh;
   margin-bottom: 2vh;
 }
 section:nth-child(6) .blog_p_description {
   font-family: "Playfair Display", serif;
   font-weight: 400;
-  font-size: 0.7em;
+  font-size: 0.7vw;
 }
 section:nth-child(6) .blog_p, section:nth-child(6) .blog_a_readmore {
   font-family: "Helvetica", sans-serif;
-  font-size: 0.7em;
+  font-size: 0.7vw;
 }
 section:nth-child(6) .blog_p_date, section:nth-child(6) .blog_cite_author {
-  font-size: 0.8em;
+  font-size: 0.8vw;
   font-family: "Helvetica", sans-serif;
 }
 

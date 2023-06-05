@@ -40,16 +40,16 @@ section:nth-child(4) {
 				i {
 					top: 2em;
 					right: 2em;
-					font-size: 1.3em;
+					font-size: 1.3vw;
 					z-index: 35;
 				}
 				
 				h3 {
-					@include positioning(40%, 1.6em, 40);
+					@include positioning(40%, 1.6vw, 40);
 				}
 				
 				p {
-					@include positioning(35%, 0.9em, 45);
+					@include positioning(35%, 0.9vw, 45);
 				}
 				
 				&:hover {
