@@ -54,15 +54,11 @@ h2 {
 /* Footer */
 /* import dossier layout */
 header {
-  max-width: 2561px;
-  max-height: 13233px;
   width: 100vw;
   height: 100vh;
-  /*     background-color: $background;
-   */
   background: no-repeat bottom url("./../img/slider/img_bg_slider_home01.jpg");
   background-size: cover;
-  padding: 3em 5vw;
+  padding: 3vw 5vw;
   position: relative;
   /* NAVBAR */
   /* TITLE */
@@ -122,6 +118,9 @@ header article:nth-child(1) span::before, header article:nth-child(1) span::afte
 header article:nth-child(1) span::after {
   top: 20px;
 }
+header article:nth-child(1) h2 img {
+  width: 10vw;
+}
 header article:nth-child(1) menu {
   display: flex;
   flex-direction: row;
@@ -136,7 +135,7 @@ header article:nth-child(1) menu ul {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  gap: 1em;
+  gap: 1vw;
 }
 header article:nth-child(1) menu ul li {
   display: flex;
@@ -153,9 +152,10 @@ header article:nth-child(1) menu ul li a {
   justify-content: center;
   color: #fff;
   text-decoration: none;
+  font-size: 1vw;
 }
 header article:nth-child(1) menu ul li a i {
-  margin-left: 0.5em;
+  margin-left: 0.5vw;
 }
 header article:nth-child(1) menu ul li a:hover {
   color: #c7a86a;
@@ -175,22 +175,23 @@ header article:nth-child(1) div a:nth-child(1) {
   gap: 0.5em;
   color: #fff;
   text-decoration: none;
+  font-size: 1vw;
 }
 header article:nth-child(1) div a:nth-child(1) img {
-  width: 1em;
+  width: 1vw;
 }
 header article:nth-child(1) div a:nth-child(2) {
   color: #fff;
   background-color: #c7a86a;
   border-radius: 5px;
   text-decoration: none;
-  padding: 1em 1.5em;
-  font-size: 0.8em;
+  padding: 1vw 1.5vw;
+  font-size: 0.8vw;
   font-weight: 800;
   transition: all 0.3s ease;
 }
 header article:nth-child(1) div a:nth-child(2) i {
-  margin-left: 1rem;
+  margin-left: 1vw;
 }
 header article:nth-child(1) div a:nth-child(2):hover {
   background: #FFF;
@@ -201,34 +202,33 @@ header article:nth-child(1) div a:nth-child(2):hover i {
 }
 header article:nth-child(2) {
   width: calc(100% - 10rem);
-  margin-top: 5em;
+  margin-top: 5vw;
   margin-left: 10vw;
 }
 header article:nth-child(2) div {
   position: relative;
 }
 header article:nth-child(2) div h1 {
-  font-size: 6em;
+  font-size: 6vw;
   color: #fff;
-  margin-bottom: 2rem;
+  margin-bottom: 2vw;
   text-align: left;
 }
 header article:nth-child(2) div figure {
   position: absolute;
   top: 0;
   left: 20vw;
-  width: auto;
-  height: 16px;
 }
 header article:nth-child(2) div figure img {
-  width: 100%;
+  width: 7vw;
   height: auto;
 }
 header article:nth-child(2) div a {
   color: #fff;
   padding: 1em 2em;
   border: 1px solid hsla(0, 0%, 100%, 0.4);
-  border-radius: 5px;
+  border-radius: 0.1vw;
+  font-size: 1vw;
 }
 header article:nth-child(2) div a:hover {
   background: hsla(0, 0%, 100%, 0.4);
@@ -241,7 +241,7 @@ header article:nth-child(2) div a:hover {
 }
 @media screen and (max-width: 1200px) {
   header article:nth-child(2) menu {
-    gap: 3em;
+    gap: 3vw;
   }
 }
 @media screen and (max-width: 1060px) {
@@ -285,7 +285,7 @@ header article:nth-child(2) div a:hover {
     background: #FFF;
     flex-direction: column;
     z-index: 100;
-    gap: 2em;
+    gap: 2vw;
   }
   header article:nth-child(1) menu ul {
     flex-direction: column;
@@ -293,13 +293,13 @@ header article:nth-child(2) div a:hover {
     gap: 0;
   }
   header article:nth-child(1) menu ul li {
-    font-size: 1.5em;
+    font-size: 1.5vw;
     opacity: 0;
     width: 100%;
   }
   header article:nth-child(1) menu ul li a {
     color: #090d0f;
-    padding: 2rem 0;
+    padding: 2vw 0;
     width: 100%;
   }
   header article:nth-child(1) menu ul li a:hover {
@@ -952,52 +952,53 @@ footer article {
   gap: 5vw;
   padding: 2vh 0;
 }
+footer article h2 figure img {
+  width: 20vw;
+}
 footer article p, footer article li {
-  font-size: 0.8em;
+  font-size: 0.8vw;
 }
 footer article ul {
   display: flex;
   flex-direction: column;
-  gap: 0.7em;
-  width: 150px;
+  gap: 0.7vw;
 }
 footer article ul li {
-  line-height: 2em;
+  line-height: 2vw;
 }
 footer article ul li h3 {
-  font-size: 1.7em;
-  margin-bottom: 0.5em;
+  font-size: 1.7vw;
+  margin-bottom: 0.5vw;
   color: #FFF;
 }
 footer article ul li address {
   display: flex;
   flex-direction: column;
-  gap: 1em;
+  gap: 1vw;
   font-style: normal;
 }
 footer article ul li address a {
   color: hsla(0, 0%, 100%, 0.5);
-}
-footer article ul:nth-child(3) {
-  width: 350px;
 }
 footer article ul:nth-child(3) li:last-child {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
+  width: 100%;
 }
 footer article ul:nth-child(3) li:last-child input {
-  width: 200px;
-  height: 50px;
+  width: 20vw;
+  height: 5vw;
   background: #FFF;
   color: #090d0f;
-  padding: 1rem 1.5rem;
-  font-size: 1.3em;
+  padding: 1vw 1.5vw;
+  font-size: 1.3vw;
+  outline: none;
 }
 footer article ul:nth-child(3) li:last-child button {
-  width: 50px;
-  aspect-ratio: 1/1;
+  width: 5vw;
+  height: 5vw;
   background: #c8a96a;
   transition: all 0.3s ease;
   position: relative;
@@ -1011,21 +1012,21 @@ footer article ul:nth-child(3) li:last-child button span {
   position: absolute;
   top: 0;
   left: 0;
-  width: 0px;
-  height: 50px;
+  width: 0;
+  height: 5vw;
   background: #FFF;
   transition: all 0.4s ease;
   z-index: 60;
 }
 footer article ul:nth-child(3) li:last-child button i {
-  font-size: 1.5em;
+  font-size: 1.5vw;
   color: #FFF;
   transition: all 0.3s ease;
   position: relative;
   z-index: 70;
 }
 footer article ul:nth-child(3) li:last-child button:hover span {
-  width: 50px;
+  width: 5vw;
 }
 footer article ul:nth-child(3) li:last-child button:hover i {
   color: #090d0f;
@@ -1034,11 +1035,11 @@ footer article ul:nth-child(4) {
   width: 20%;
 }
 footer article ul:nth-child(4) img {
-  width: 1em;
-  margin-right: 1em;
+  width: 1vw;
+  margin-right: 1vw;
 }
 footer article:first-child ul li:first-child {
-  margin-bottom: 0.5em;
+  margin-bottom: 0.5vw;
 }
 footer article:last-child {
   display: flex;
@@ -1057,10 +1058,10 @@ footer article:last-child div p em {
   color: #c8a96a;
 }
 footer article:last-child div figure {
-  margin-left: 1em;
+  margin-left: 1vw;
 }
 footer article:last-child div figure img {
-  width: 4em;
+  width: 4vw;
 }
 footer article:last-child ul {
   display: flex;

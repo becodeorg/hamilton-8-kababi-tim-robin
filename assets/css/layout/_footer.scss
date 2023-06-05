@@ -16,29 +16,36 @@ footer {
 		gap: 5vw;
 		padding: 2vh 0;
 		
+		h2 {
+			figure {
+				img {
+					width: 20vw;
+				}
+			}
+		}
+		
 		p, li {
-			font-size: 0.8em;
+			font-size: 0.8vw;
 		}
 		
 		ul {
 			display: flex;
 			flex-direction: column;
-			gap: 0.7em;
-			width: 150px;
+			gap: 0.7vw;
 			
 			li {
-				line-height: 2em;
+				line-height: 2vw;
 				
 				h3 {
-					font-size: 1.7em;
-					margin-bottom: 0.5em;
+					font-size: 1.7vw;
+					margin-bottom: 0.5vw;
 					color: $white;
 				}
 				
 				address {
 					display: flex;
 					flex-direction: column;
-					gap: 1em;
+					gap: 1vw;
 					font-style: normal;
 					
 					a {
@@ -48,23 +55,24 @@ footer {
 			}
 			
 			&:nth-child(3) {
-				width: 350px;
 				
 				li:last-child {
 					@include flexRowCenterFlexStart();
+					width: 100%;
 					
 					input {
-						width: 200px;
-						height: 50px;
+						width: 20vw;
+						height: 5vw;
 						background: $white;
 						color: $background;
-						padding: 1rem 1.5rem;
-						font-size: 1.3em;
+						padding: 1vw 1.5vw;
+						font-size: 1.3vw;
+						outline: none;
 					}
 					
 					button {
-						width: 50px;
-						aspect-ratio: 1 / 1;
+						width: 5vw;
+						height: 5vw;
 						background: $aHoverBackground;
 						transition: all .3s ease;
 						position: relative;
@@ -75,15 +83,15 @@ footer {
 							position: absolute;
 							top: 0;
 							left: 0;
-							width: 0px;
-							height: 50px;
+							width: 0;
+							height: 5vw;
 							background: $white;
 							transition: all .4s ease;
 							z-index: 60;
 						}
 						
 						i {
-							font-size: 1.5em;
+							font-size: 1.5vw;
 							color: $white;
 							transition: all .3s ease;
 							position: relative;
@@ -93,7 +101,7 @@ footer {
 						&:hover {
 							
 							span {
-								width: 50px;
+								width: 5vw;
 							}
 							
 							i {
@@ -108,8 +116,8 @@ footer {
 				width: 20%;
 				
 				img {
-					width: 1em;
-					margin-right: 1em;
+					width: 1vw;
+					margin-right: 1vw;
 				}
 			}
 		}
@@ -119,7 +127,7 @@ footer {
 			ul {
 				
 				li:first-child {
-					margin-bottom: 0.5em;
+					margin-bottom: 0.5vw;
 				}
 			}
 		}
@@ -139,10 +147,10 @@ footer {
 				}
 				
 				figure {
-					margin-left: 1em;
+					margin-left: 1vw;
 					
 					img {
-						width: 4em;
+						width: 4vw;
 					}
 				}
 			}

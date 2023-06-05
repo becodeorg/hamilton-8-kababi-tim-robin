@@ -1,14 +1,11 @@
 
 
 header {
-    /*max-width: 2561px;*/
-    max-height: 13233px;
     width: 100vw;
     height: 100vh;
-/*     background-color: $background;
- */ background: no-repeat bottom url("./../img/slider/img_bg_slider_home01.jpg");
+    background: no-repeat bottom url("./../img/slider/img_bg_slider_home01.jpg");
     background-size: cover;
-    padding: 3em 5vw;
+    padding: 3vw 5vw;
     position: relative;
 
     a {
@@ -60,6 +57,11 @@ header {
                 top: 20px;
             }
         }
+        h2 {
+            img {
+                width: 10vw;
+            }
+        }
         
         menu {
             @include flexRowCenter();
@@ -69,7 +71,7 @@ header {
             
             ul {
                 @include flexRowCenter();
-                gap: 1em;
+                gap: 1vw;
             
                 li {
                     @include flexRowCenter();
@@ -80,9 +82,10 @@ header {
                         @include flexRowCenter();
                         color: #fff;
                         text-decoration: none;
+                        font-size: 1vw;
                     
                         i {
-                            margin-left: 0.5em;
+                            margin-left: 0.5vw;
                             }
                     
                         &:hover {
@@ -102,9 +105,10 @@ header {
                 gap: 0.5em;
                 color: #fff;
                 text-decoration: none;
+                font-size: 1vw;
                 
                 img {
-                    width: 1em;
+                    width: 1vw;
                 }
 
              }
@@ -113,13 +117,13 @@ header {
                 background-color: $aHover;
                 border-radius: 5px; 
                 text-decoration: none;
-                padding: 1em 1.5em;
-                font-size: 0.8em;
+                padding: 1vw 1.5vw;
+                font-size: 0.8vw;
                 font-weight: 800;
                 transition: all .3s ease;
                 
                 i {
-                    margin-left: 1rem;
+                    margin-left: 1vw;
                 }
                 
                 &:hover {
@@ -139,7 +143,7 @@ header {
     article:nth-child(2) {
         
         width: calc(100% - 10rem);
-        margin-top: 5em;
+        margin-top: 5vw;
         margin-left: 10vw;
         
 
@@ -147,9 +151,9 @@ header {
             position: relative;
 
             h1 {
-                font-size: 6em;
+                font-size: 6vw;
                 color: #fff;
-                margin-bottom: 2rem;
+                margin-bottom: 2vw;
                 text-align: left;
                 
             }
@@ -159,11 +163,8 @@ header {
                 top: 0;
                 left: 20vw;
 
-                width: auto;
-                height: 16px ;
-
                 img {
-                    width: 100%;
+                    width: 7vw;
                     height: auto;
                 }
             }
@@ -172,7 +173,8 @@ header {
                 color: #fff;
                 padding: 1em 2em;
                 border: 1px solid hsla(0, 0%, 100%, 0.4);
-                border-radius: 5px;
+                border-radius: 0.1vw;
+                font-size: 1vw;
                 
                 &:hover {
                     background: hsla(0, 0%, 100%, 0.4);
@@ -197,7 +199,7 @@ header {
     header {
         article:nth-child(2) {
             menu {
-                gap: 3em;
+                gap: 3vw;
             }
         }
     }
@@ -256,7 +258,7 @@ header {
                 background: $white;
                 flex-direction: column;
                 z-index: 100;
-                gap: 2em;
+                gap: 2vw;
                 
                 ul {
                     flex-direction: column;
@@ -264,13 +266,13 @@ header {
                     gap: 0;
                 
                     li {
-                        font-size: 1.5em;
+                        font-size: 1.5vw;
                         opacity: 0;
                         width: 100%;
                     
                         a {
                             color: $background;
-                            padding: 2rem 0;
+                            padding: 2vw 0;
                             width: 100%;
                             
                             &:hover {
