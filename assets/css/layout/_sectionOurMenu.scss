@@ -1,49 +1,48 @@
 body > main > section:nth-child(3) {
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     background-color: #faf6f0;
     position: relative;
-    
+    @include flexColumnCenter();
+    padding: 3rem 0;
 
     h2 {
 
-        text-align: center;
         font-size: 2em;
         margin-bottom: 2rem;
-        padding-top: 7rem;
         position: relative;
         z-index: 2;
-        
+        font-weight: 400;
     }
     
-    
     p {
-        text-align: center;
         position: relative;
-        font-size: 1em;
+        font-size: 1vw;
         color: rgb(90, 90, 90);
         z-index: 3;
     }
 
     article {
-
-        width: 80%;
-        height: 50%;
-        display: flex;
-        justify-content: space-between;
+        width: 100%;
+        @include flexRowCenter();
         flex-wrap: wrap;
-        margin: auto;
         z-index: 10;
         position: relative;
-        top: 10%;
-        }
+        gap: 2em;
+        padding: 3em;
+    }
 
-    
     .menu {
-
-    border: 2px dashed transparent;
-    display: flex;
-    flex-wrap: nowrap;
+        width: 40vw;
+        border: 2px dashed transparent;
+        display: flex;
+        flex-wrap: nowrap;
+        margin: 0;
+        padding: 2rem;
+    
+        div {
+            @include flexColumnCenterFlexStart();
+        }
 
         &:hover {
             border: 2px dashed $aHover;
@@ -55,7 +54,7 @@ body > main > section:nth-child(3) {
         position: absolute;
         top: 0;
         right: 0;
-        width: auto;
+        width: 30vw;
         height: 100vh;
         z-index: 0;
 
@@ -71,7 +70,7 @@ body > main > section:nth-child(3) {
         position: absolute;
         bottom: -10vh;
         left: 0;
-        width: auto;
+        width: 20vw;
         height: 50vh;
         z-index: 0;
 
@@ -98,7 +97,7 @@ body > main > section:nth-child(3) > article > div {
 
     .price {
         margin-left: 3em;
-        font-size: 2em;
+        font-size: 2vw;
         color: $aHover;
     }
 }
@@ -106,7 +105,7 @@ body > main > section:nth-child(3) > article > div {
 .menu > div > p {
     text-align: left;
     width: 100%;
-    font-size: 0.7rem;
+    font-size: 0.7vw;
     
 }
 
@@ -115,4 +114,10 @@ body > main > section:nth-child(3) > article > div {
 body > main > section:nth-child(3) > p:nth-child(6) {
     z-index: 0;
     font-family: 'Playfair Display', serif; 
+}
+
+@media screen and (max-width: 640px) {
+    body > main > section:nth-child(3) .menu {
+        width: 80vw;
+    }
 }

@@ -70,25 +70,25 @@ header {
                 @include flexRowCenter();
                 gap: 1em;
             
-            li {
-                @include flexRowCenter();
-                transition: all .3s ease;
-                transition-delay: 0s;
-
-                a {
+                li {
                     @include flexRowCenter();
-                    color: #fff;
-                    text-decoration: none;
+                    transition: all .3s ease;
+                    transition-delay: 0s;
+
+                    a {
+                        @include flexRowCenter();
+                        color: #fff;
+                        text-decoration: none;
                     
-                    i {
-                        margin-left: 0.5em;
-                    }
+                        i {
+                            margin-left: 0.5em;
+                            }
                     
-                    &:hover {
-                        color: $aHover;
+                        &:hover {
+                            color: $aHover;
+                        }
                     }
                 }
-            }
             }
         }
 
@@ -255,26 +255,28 @@ header {
                 background: $white;
                 flex-direction: column;
                 z-index: 100;
-                gap: 0;
+                gap: 2em;
                 
                 ul {
                     flex-direction: column;
-                
-                li {
-                    font-size: 1.5em;
-                    opacity: 0;
                     width: 100%;
-                    
-                    a {
-                        color: $background;
-                        padding: 2rem 0;
+                    gap: 0;
+                
+                    li {
+                        font-size: 1.5em;
+                        opacity: 0;
                         width: 100%;
-                        
-                        &:hover {
-                            background: hsla(0, 0%, 0%, 0.05);
+                    
+                        a {
+                            color: $background;
+                            padding: 2rem 0;
+                            width: 100%;
+                            
+                            &:hover {
+                                background: hsla(0, 0%, 0%, 0.05);
+                            }
                         }
                     }
-                }
                 }
                 
                 div {
@@ -283,7 +285,7 @@ header {
                     transition: all .3s ease;
                     transition-delay: 0s;
                     margin: 2em 0;
-                    gap: 1em;
+                    gap: 2em;
                     
                     a {
                         
