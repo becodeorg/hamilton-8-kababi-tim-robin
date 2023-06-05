@@ -64,7 +64,11 @@ header {
             @include flexRowCenter();
             transition: all .3s ease;
             transition-delay: .4s;
-            gap: 1em;
+            gap: 25vw;
+            
+            ul {
+                @include flexRowCenter();
+                gap: 1em;
             
             li {
                 @include flexRowCenter();
@@ -85,12 +89,12 @@ header {
                     }
                 }
             }
+            }
         }
 
         div {
             @include flexRowCenter();
             gap: 3em;
-            margin-left: 19vw;
 
             a:nth-child(1) {
                 @include flexRowCenter();
@@ -178,6 +182,26 @@ header {
 
 }
 
+@media screen and (max-width: 1400px) {
+    header {
+        article:nth-child(1) {
+            menu {
+                gap: 10vw;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    header {
+        article:nth-child(2) {
+            menu {
+                gap: 3em;
+            }
+        }
+    }
+}
+
 @media screen and (max-width: 1060px) {
     header {
         
@@ -233,6 +257,9 @@ header {
                 z-index: 100;
                 gap: 0;
                 
+                ul {
+                    flex-direction: column;
+                
                 li {
                     font-size: 1.5em;
                     opacity: 0;
@@ -247,6 +274,7 @@ header {
                             background: hsla(0, 0%, 0%, 0.05);
                         }
                     }
+                }
                 }
                 
                 div {

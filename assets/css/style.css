@@ -114,9 +114,16 @@ header article:nth-child(1) menu {
   justify-content: center;
   transition: all 0.3s ease;
   transition-delay: 0.4s;
+  gap: 25vw;
+}
+header article:nth-child(1) menu ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
   gap: 1em;
 }
-header article:nth-child(1) menu li {
+header article:nth-child(1) menu ul li {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -124,7 +131,7 @@ header article:nth-child(1) menu li {
   transition: all 0.3s ease;
   transition-delay: 0s;
 }
-header article:nth-child(1) menu li a {
+header article:nth-child(1) menu ul li a {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -132,10 +139,10 @@ header article:nth-child(1) menu li a {
   color: #fff;
   text-decoration: none;
 }
-header article:nth-child(1) menu li a i {
+header article:nth-child(1) menu ul li a i {
   margin-left: 0.5em;
 }
-header article:nth-child(1) menu li a:hover {
+header article:nth-child(1) menu ul li a:hover {
   color: #c7a86a;
 }
 header article:nth-child(1) div {
@@ -144,7 +151,6 @@ header article:nth-child(1) div {
   align-items: center;
   justify-content: center;
   gap: 3em;
-  margin-left: 19vw;
 }
 header article:nth-child(1) div a:nth-child(1) {
   display: flex;
@@ -213,6 +219,16 @@ header article:nth-child(2) div a:hover {
   background: hsla(0, 0%, 100%, 0.4);
 }
 
+@media screen and (max-width: 1400px) {
+  header article:nth-child(1) menu {
+    gap: 10vw;
+  }
+}
+@media screen and (max-width: 1200px) {
+  header article:nth-child(2) menu {
+    gap: 3em;
+  }
+}
 @media screen and (max-width: 1060px) {
   header article:nth-child(1) input#burger {
     display: block;
@@ -256,17 +272,20 @@ header article:nth-child(2) div a:hover {
     z-index: 100;
     gap: 0;
   }
-  header article:nth-child(1) menu li {
+  header article:nth-child(1) menu ul {
+    flex-direction: column;
+  }
+  header article:nth-child(1) menu ul li {
     font-size: 1.5em;
     opacity: 0;
     width: 100%;
   }
-  header article:nth-child(1) menu li a {
+  header article:nth-child(1) menu ul li a {
     color: #090d0f;
     padding: 2rem 0;
     width: 100%;
   }
-  header article:nth-child(1) menu li a:hover {
+  header article:nth-child(1) menu ul li a:hover {
     background: hsla(0, 0%, 0%, 0.05);
   }
   header article:nth-child(1) menu div {
