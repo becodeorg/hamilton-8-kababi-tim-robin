@@ -66,10 +66,39 @@ footer {
 						width: 50px;
 						aspect-ratio: 1 / 1;
 						background: $aHoverBackground;
+						transition: all .3s ease;
+						position: relative;
+						@include flexRowCenter();
+						cursor: pointer;
+						
+						span {
+							position: absolute;
+							top: 0;
+							left: 0;
+							width: 0px;
+							height: 50px;
+							background: $white;
+							transition: all .4s ease;
+							z-index: 60;
+						}
 						
 						i {
 							font-size: 1.5em;
 							color: $white;
+							transition: all .3s ease;
+							position: relative;
+							z-index: 70;
+						}
+						
+						&:hover {
+							
+							span {
+								width: 50px;
+							}
+							
+							i {
+								color: $background;
+							}
 						}
 					}
 				}

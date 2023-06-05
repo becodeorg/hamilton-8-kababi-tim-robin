@@ -38,7 +38,8 @@ h2 {
   font-size: 3em;
 }
 
-/* import dossier utils */ /* Footer */
+/* import dossier utils */
+/* Footer */
 /* import dossier layout */
 header {
   max-width: 2561px;
@@ -917,10 +918,36 @@ footer article ul:nth-child(3) li:last-child button {
   width: 50px;
   aspect-ratio: 1/1;
   background: #c8a96a;
+  transition: all 0.3s ease;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+footer article ul:nth-child(3) li:last-child button span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0px;
+  height: 50px;
+  background: #FFF;
+  transition: all 0.4s ease;
+  z-index: 60;
 }
 footer article ul:nth-child(3) li:last-child button i {
   font-size: 1.5em;
   color: #FFF;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 70;
+}
+footer article ul:nth-child(3) li:last-child button:hover span {
+  width: 50px;
+}
+footer article ul:nth-child(3) li:last-child button:hover i {
+  color: #090d0f;
 }
 footer article ul:nth-child(4) {
   width: 20%;
