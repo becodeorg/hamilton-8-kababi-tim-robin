@@ -61,7 +61,7 @@
 @mixin backgroundImage($url, $url2) {
 	span {
 		display: block;
-		width: 50px;
+		width: 3vw;
 		aspect-ratio: 1 / 1;
 		background-image: url($url);
 		background-repeat: no-repeat;
@@ -71,7 +71,6 @@
 	
 	&:hover {
 		span {
-			
 			background-image: url($url2);
 		}
 	}

@@ -26,6 +26,7 @@ section {
 			&~p {
 				margin-bottom: 10em;
 				font-weight: 200;
+				font-size: 0.8vw;
 			}
 		}
 		
@@ -33,17 +34,17 @@ section {
 			width: 100%;
 			@include flexRowCenter();
 			flex-wrap: wrap;
-			gap: 2em;
+			gap: 2vw;
 			position: relative;
 			z-index: 10;
 			
 			a {
-				width: 180px;
-				min-height: 205px;
+				width: 12vw;
+				height: 15vw;
 				padding: 1em 0.5em;
 				background: $backgroundCategory;
 				@include flexColumnCenter();
-				gap: 1em;
+				gap: 1vw;
 				color: $textCategory;
 				transition: all .3s ease;
 				font-size: 1.2vw;
@@ -72,10 +73,6 @@ section {
 					@include backgroundImage('../img/icon/icon-dark/shrimp.svg', '../img/icon/icon-light/shrimp.svg');
 				}
 				
-				img {
-					width: 2em;
-				}
-				
 				&:hover {
 					background: $aHover;
 					color: $white;
@@ -84,6 +81,20 @@ section {
 						color: $white;
 					}
 				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1200px) {
+	section:nth-child(1) {
+		article a {
+			width: 200px;
+			height: 240px;
+			font-size: 1.5em;
+			
+			span {
+				width: 3em;
 			}
 		}
 	}

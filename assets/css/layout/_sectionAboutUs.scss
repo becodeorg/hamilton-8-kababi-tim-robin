@@ -13,7 +13,7 @@ section:nth-child(2) {
 	
 	div:first-child {
 		position: absolute;
-		top: -75px;
+		top: -10vh;
 		left: 0;
 		width: 100%;
 		@include flexRowCenter();
@@ -36,9 +36,9 @@ section:nth-child(2) {
 			
 			img {
 				
-				width: 50vw;
-				border-radius: 500px;
-				border: 2em solid $white;
+				width: 35vw;
+				border-radius: 50vw;
+				border: 2vw solid $white;
 			}
 		}
 	}

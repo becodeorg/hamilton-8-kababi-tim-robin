@@ -80,6 +80,20 @@ section:nth-child(4) {
 	}
 }
 
+@media screen and (max-width: 1000px) {
+	section:nth-child(4) {
+		article {
+			figure {
+				div {
+					gap: 2em;
+					h3 { font-size: 1.5em; }
+					p { font-size: 1em; }
+				}
+			}
+		}
+	}
+}
+
 @media screen and (max-width: 790px) {
 	section:nth-child(4) {
 		

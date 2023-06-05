@@ -35,7 +35,7 @@ h1, h2, h3, section:first-child article a, section p:last-child, a p {
 }
 
 h2 {
-  font-size: 3em;
+  font-size: 3vw;
 }
 
 @font-face {
@@ -454,6 +454,17 @@ section:nth-child(4) a:hover {
   border-color: #202020;
 }
 
+@media screen and (max-width: 1000px) {
+  section:nth-child(4) article figure div {
+    gap: 2em;
+  }
+  section:nth-child(4) article figure div h3 {
+    font-size: 1.5em;
+  }
+  section:nth-child(4) article figure div p {
+    font-size: 1em;
+  }
+}
 @media screen and (max-width: 790px) {
   section:nth-child(4) article {
     width: 90vw;
@@ -480,7 +491,7 @@ section:nth-child(2) h2 {
 }
 section:nth-child(2) div:first-child {
   position: absolute;
-  top: -75px;
+  top: -10vh;
   left: 0;
   width: 100%;
   display: flex;
@@ -495,9 +506,9 @@ section:nth-child(2) div:first-child figure:nth-child(3) img {
   width: 20vw;
 }
 section:nth-child(2) div:first-child figure:nth-child(2) img {
-  width: 50vw;
-  border-radius: 500px;
-  border: 2em solid #FFF;
+  width: 35vw;
+  border-radius: 50vw;
+  border: 2vw solid #FFF;
 }
 section:nth-child(2) figure:nth-child(4) {
   position: absolute;
@@ -588,6 +599,7 @@ section:nth-child(1) h2 {
 section:nth-child(1) h2 ~ p {
   margin-bottom: 10em;
   font-weight: 200;
+  font-size: 0.8vw;
 }
 section:nth-child(1) article {
   width: 100%;
@@ -596,27 +608,27 @@ section:nth-child(1) article {
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 2em;
+  gap: 2vw;
   position: relative;
   z-index: 10;
 }
 section:nth-child(1) article a {
-  width: 180px;
-  min-height: 205px;
+  width: 12vw;
+  height: 15vw;
   padding: 1em 0.5em;
   background: #fefefe;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 1em;
+  gap: 1vw;
   color: #202020;
   transition: all 0.3s ease;
   font-size: 1.2vw;
 }
 section:nth-child(1) article a:nth-child(1) span {
   display: block;
-  width: 50px;
+  width: 3vw;
   aspect-ratio: 1/1;
   background-image: url("../img/icon/icon-dark/burger.svg");
   background-repeat: no-repeat;
@@ -628,7 +640,7 @@ section:nth-child(1) article a:nth-child(1):hover span {
 }
 section:nth-child(1) article a:nth-child(2) span {
   display: block;
-  width: 50px;
+  width: 3vw;
   aspect-ratio: 1/1;
   background-image: url("../img/icon/icon-dark/pizza.svg");
   background-repeat: no-repeat;
@@ -640,7 +652,7 @@ section:nth-child(1) article a:nth-child(2):hover span {
 }
 section:nth-child(1) article a:nth-child(3) span {
   display: block;
-  width: 50px;
+  width: 3vw;
   aspect-ratio: 1/1;
   background-image: url("../img/icon/icon-dark/coffee.svg");
   background-repeat: no-repeat;
@@ -652,7 +664,7 @@ section:nth-child(1) article a:nth-child(3):hover span {
 }
 section:nth-child(1) article a:nth-child(4) span {
   display: block;
-  width: 50px;
+  width: 3vw;
   aspect-ratio: 1/1;
   background-image: url("../img/icon/icon-dark/chicken-leg.svg");
   background-repeat: no-repeat;
@@ -664,7 +676,7 @@ section:nth-child(1) article a:nth-child(4):hover span {
 }
 section:nth-child(1) article a:nth-child(5) span {
   display: block;
-  width: 50px;
+  width: 3vw;
   aspect-ratio: 1/1;
   background-image: url("../img/icon/icon-dark/cocktail.svg");
   background-repeat: no-repeat;
@@ -676,7 +688,7 @@ section:nth-child(1) article a:nth-child(5):hover span {
 }
 section:nth-child(1) article a:nth-child(6) span {
   display: block;
-  width: 50px;
+  width: 3vw;
   aspect-ratio: 1/1;
   background-image: url("../img/icon/icon-dark/shrimp.svg");
   background-repeat: no-repeat;
@@ -686,9 +698,6 @@ section:nth-child(1) article a:nth-child(6) span {
 section:nth-child(1) article a:nth-child(6):hover span {
   background-image: url("../img/icon/icon-light/shrimp.svg");
 }
-section:nth-child(1) article a img {
-  width: 2em;
-}
 section:nth-child(1) article a:hover {
   background: #c7a86a;
   color: #FFF;
@@ -697,6 +706,16 @@ section:nth-child(1) article a:hover i {
   color: #FFF;
 }
 
+@media screen and (max-width: 1200px) {
+  section:nth-child(1) article a {
+    width: 200px;
+    height: 240px;
+    font-size: 1.5em;
+  }
+  section:nth-child(1) article a span {
+    width: 3em;
+  }
+}
 body > main > section:nth-child(3) {
   width: 100vw;
   min-height: 100vh;
@@ -788,6 +807,9 @@ body > main > section:nth-child(3) > article > div {
   background-color: #fff;
   border-radius: 5px;
   margin-bottom: 1rem;
+}
+body > main > section:nth-child(3) > article > div h3 {
+  font-size: 1.5vw;
 }
 body > main > section:nth-child(3) > article > div .price {
   margin-left: 3em;

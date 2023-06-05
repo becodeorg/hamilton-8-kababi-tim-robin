@@ -93,9 +93,11 @@ body > main > section:nth-child(3) > article > div {
     border-radius: 5px;
     margin-bottom: 1rem;
     
+    h3 {
+        font-size: 1.5vw;
+    }
     
-
-    .price {
+     .price {
         margin-left: 3em;
         font-size: 2vw;
         color: $aHover;
