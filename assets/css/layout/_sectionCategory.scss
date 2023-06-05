@@ -46,7 +46,7 @@ section {
 				gap: 1em;
 				color: $textCategory;
 				transition: all .3s ease;
-				font-size: 1.2em;
+				font-size: 1.2vw;
 				
 				&:nth-child(1) {
 					@include backgroundImage('../img/icon/icon-dark/burger.svg', '../img/icon/icon-light/burger.svg');
