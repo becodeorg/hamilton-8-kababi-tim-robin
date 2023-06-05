@@ -729,8 +729,6 @@ body > main > section:nth-child(3) > p:nth-child(6) {
     width: 80vw;
   }
 }
-/* || VARIABLES */
-/* ||UTILITY CLASSES */
 .nowrap {
   white-space: nowrap;
 }
@@ -752,8 +750,6 @@ section:nth-child(6) {
 }
 section:nth-child(6) h2 {
   letter-spacing: 0.1em;
-  font-family: "Playfair Display", serif;
-  font-weight: 400;
   font-size: 3em;
   margin-top: 10vh;
   margin-bottom: 2vh;
