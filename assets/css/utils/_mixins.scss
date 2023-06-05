@@ -49,3 +49,11 @@
 	font-size: $fontSize;
 	z-index: $zIndex;
 }
+
+@mixin burgerBtn($width, $height) {
+	position: fixed;
+	top: 3rem;
+	right: 5vw;
+	width: $width;
+	height: $height;
+}

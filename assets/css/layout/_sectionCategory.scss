@@ -12,14 +12,16 @@ section {
 		z-index: 1;
 		top: 5vh;
 		left: 0;
-		font-size: 11em!important;
+		font-size: 11vw!important;
 		color: hsla(40, 46%, 60%, 0.2)!important;
 	}
 	
 	&:nth-child(1) {
-		/*background: $backgroundSection url("../img/banner/imgbgcategory.jpg") top no-repeat;*/
-		background: $backgroundSection;
-		mix-blend-mode: multiply;
+		background-image: url("../img/banner/imgbgcategory.jpg");
+		background-color: $backgroundSection;
+		background-size: cover;
+		background-position: center;
+		background-blend-mode: multiply;
 		@include flexColumnCenter();
 		padding: 15vh 5vw 35vh 5vw;
 		
