@@ -77,8 +77,8 @@ header article:nth-child(1) input#burger {
   -moz-appearance: none;
   z-index: 200;
   position: fixed;
-  top: 2em;
-  right: 2em;
+  top: 3rem;
+  right: 5vw;
   width: 30px;
   height: 30px;
   cursor: pointer;
@@ -92,8 +92,8 @@ header article:nth-child(1) span {
   display: none;
   z-index: 190;
   position: fixed;
-  top: 2em;
-  right: 2em;
+  top: 3rem;
+  right: 5vw;
   width: 30px;
   height: 3px;
 }
