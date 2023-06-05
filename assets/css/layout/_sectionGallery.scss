@@ -5,10 +5,10 @@ section:nth-child(4) {
 	padding: 20vh 0;
 	
 	article {
-		display: grid;
-		grid-template-columns: repeat(auto-fill, 1fr);
-		grid-template-rows: 1fr 1fr;
-		grid-gap: 2em;
+		width: 80%;
+		@include flexRowCenter();
+		flex-wrap: wrap;
+		gap: 2em;
 		margin-top: 20vh;
 		margin-bottom: 10vh;
 		
@@ -60,14 +60,6 @@ section:nth-child(4) {
 					}
 				}
 			}
-		}
-		
-		figure:nth-child(1) {
-			grid-column: 1 / span 2;
-		}
-		
-		figure:nth-child(6) {
-			grid-column: 3 / span 2;
 		}
 	}
 	
