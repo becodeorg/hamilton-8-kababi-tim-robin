@@ -57,3 +57,22 @@
 	width: $width;
 	height: $height;
 }
+
+@mixin backgroundImage($url, $url2) {
+	span {
+		display: block;
+		width: 50px;
+		aspect-ratio: 1 / 1;
+		background-image: url($url);
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+	}
+	
+	&:hover {
+		span {
+			
+			background-image: url($url2);
+		}
+	}
+}

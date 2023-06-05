@@ -1,8 +1,3 @@
-@font-face {
-	font-family: "flaticon";
-	src: url("../font/flaticon.ttf");
-}
-
 section {
 	width: 100%;
 	position: relative;
@@ -52,6 +47,30 @@ section {
 				color: $textCategory;
 				transition: all .3s ease;
 				font-size: 1.2em;
+				
+				&:nth-child(1) {
+					@include backgroundImage('../img/icon/icon-dark/burger.svg', '../img/icon/icon-light/burger.svg');
+				}
+				
+				&:nth-child(2) {
+					@include backgroundImage('../img/icon/icon-dark/pizza.svg', '../img/icon/icon-light/pizza.svg');
+				}
+				
+				&:nth-child(3) {
+					@include backgroundImage('../img/icon/icon-dark/coffee.svg', '../img/icon/icon-light/coffee.svg');
+				}
+				
+				&:nth-child(4) {
+					@include backgroundImage('../img/icon/icon-dark/chicken-leg.svg', '../img/icon/icon-light/chicken-leg.svg');
+				}
+				
+				&:nth-child(5) {
+					@include backgroundImage('../img/icon/icon-dark/cocktail.svg', '../img/icon/icon-light/cocktail.svg');
+				}
+				
+				&:nth-child(6) {
+					@include backgroundImage('../img/icon/icon-dark/shrimp.svg', '../img/icon/icon-light/shrimp.svg');
+				}
 				
 				img {
 					width: 2em;

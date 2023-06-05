@@ -38,6 +38,18 @@ h2 {
   font-size: 3em;
 }
 
+@font-face {
+  font-family: "flaticon";
+  src: url("../font/flaticon.ttf") format("truetype");
+}
+[data-icon]:before {
+  font-family: "flaticon";
+  content: attr(data-icon);
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+
 /* import dossier utils */
 /* Footer */
 /* import dossier layout */
@@ -49,6 +61,7 @@ header {
   /*     background-color: $background;
    */
   background: no-repeat bottom url("./../img/slider/img_bg_slider_home01.jpg");
+  background-size: cover;
   padding: 3em 5vw;
   position: relative;
   /* NAVBAR */
@@ -545,10 +558,6 @@ section:nth-child(2) > p:last-child {
   bottom: 45vw;
 }
 
-@font-face {
-  font-family: "flaticon";
-  src: url("../font/flaticon.ttf");
-}
 section {
   width: 100%;
   position: relative;
@@ -604,6 +613,78 @@ section:nth-child(1) article a {
   color: #202020;
   transition: all 0.3s ease;
   font-size: 1.2em;
+}
+section:nth-child(1) article a:nth-child(1) span {
+  display: block;
+  width: 50px;
+  aspect-ratio: 1/1;
+  background-image: url("../img/icon/icon-dark/burger.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+section:nth-child(1) article a:nth-child(1):hover span {
+  background-image: url("../img/icon/icon-light/burger.svg");
+}
+section:nth-child(1) article a:nth-child(2) span {
+  display: block;
+  width: 50px;
+  aspect-ratio: 1/1;
+  background-image: url("../img/icon/icon-dark/pizza.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+section:nth-child(1) article a:nth-child(2):hover span {
+  background-image: url("../img/icon/icon-light/pizza.svg");
+}
+section:nth-child(1) article a:nth-child(3) span {
+  display: block;
+  width: 50px;
+  aspect-ratio: 1/1;
+  background-image: url("../img/icon/icon-dark/coffee.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+section:nth-child(1) article a:nth-child(3):hover span {
+  background-image: url("../img/icon/icon-light/coffee.svg");
+}
+section:nth-child(1) article a:nth-child(4) span {
+  display: block;
+  width: 50px;
+  aspect-ratio: 1/1;
+  background-image: url("../img/icon/icon-dark/chicken-leg.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+section:nth-child(1) article a:nth-child(4):hover span {
+  background-image: url("../img/icon/icon-light/chicken-leg.svg");
+}
+section:nth-child(1) article a:nth-child(5) span {
+  display: block;
+  width: 50px;
+  aspect-ratio: 1/1;
+  background-image: url("../img/icon/icon-dark/cocktail.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+section:nth-child(1) article a:nth-child(5):hover span {
+  background-image: url("../img/icon/icon-light/cocktail.svg");
+}
+section:nth-child(1) article a:nth-child(6) span {
+  display: block;
+  width: 50px;
+  aspect-ratio: 1/1;
+  background-image: url("../img/icon/icon-dark/shrimp.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+section:nth-child(1) article a:nth-child(6):hover span {
+  background-image: url("../img/icon/icon-light/shrimp.svg");
 }
 section:nth-child(1) article a img {
   width: 2em;
