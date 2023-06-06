@@ -196,7 +196,7 @@ header article:nth-child(2) {
   height: 100%;
   width: 100%;
   margin-top: 5vw;
-  margin-left: 10vw;
+  padding-left: 10vw;
 }
 header article:nth-child(2) div {
   position: relative;
@@ -230,7 +230,7 @@ header article:nth-child(2) div a:hover {
 
 @media screen and (max-width: 1000px) {
   header {
-    padding: 3em 5em;
+    padding: 10vw 15vw;
   }
   header article:nth-child(1) h2 img {
     width: 10em;
@@ -252,6 +252,9 @@ header article:nth-child(2) div a:hover {
     font-size: 1.5em;
     padding: 1em 1.5em;
   }
+  header article:nth-child(2) {
+    padding-left: 0;
+  }
   header article:nth-child(2) div h1 {
     font-size: 4.5em;
   }
@@ -261,6 +264,11 @@ header article:nth-child(2) div a:hover {
   header article:nth-child(2) div a {
     margin-top: 2em;
     font-size: 1em;
+  }
+}
+@media screen and (max-width: 400px) {
+  header {
+    padding: 15vw 2vw;
   }
 }
 body {
@@ -423,6 +431,14 @@ section:nth-child(4) a:hover {
   }
   section:nth-child(4) a i {
     margin-left: 1em;
+  }
+}
+@media screen and (max-width: 500px) {
+  section:nth-child(4) article figure div h3 {
+    font-size: 1.1rem !important;
+  }
+  section:nth-child(4) article figure div p {
+    font-size: 0.9rem !important;
   }
 }
 section:nth-child(2) {
@@ -750,6 +766,7 @@ body > main > section:nth-child(3) .menu div {
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
+  width: 80%;
 }
 body > main > section:nth-child(3) .menu:hover {
   border: 2px dashed #c7a86a;
@@ -795,7 +812,6 @@ body > main > section:nth-child(3) > article > div h3 {
   font-size: 1.5vw;
 }
 body > main > section:nth-child(3) > article > div .price {
-  margin-left: 3em;
   font-size: 2vw;
   color: #c7a86a;
 }

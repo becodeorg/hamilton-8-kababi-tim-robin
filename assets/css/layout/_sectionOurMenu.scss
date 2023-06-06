@@ -42,6 +42,7 @@ body > main > section:nth-child(3) {
     
         div {
             @include flexColumnCenterFlexStart();
+            width: 80%;
         }
 
         &:hover {
@@ -98,7 +99,6 @@ body > main > section:nth-child(3) > article > div {
     }
     
      .price {
-        margin-left: 3em;
         font-size: 2vw;
         color: $aHover;
     }
