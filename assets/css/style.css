@@ -366,6 +366,89 @@ section:nth-child(4) a:hover {
   border-color: #202020;
 }
 
+@media screen and (max-width: 1000px) {
+  section:nth-child(4) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 30;
+    padding: 20vh 0;
+  }
+  section:nth-child(4) article {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2em;
+    margin-top: 20vh;
+    margin-bottom: 10vh;
+  }
+  section:nth-child(4) article figure {
+    position: relative;
+  }
+  section:nth-child(4) article figure img {
+    position: relative;
+    z-index: 30;
+  }
+  section:nth-child(4) article figure div {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 30;
+    transition: all 0.5s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  section:nth-child(4) article figure div i, section:nth-child(4) article figure div h3, section:nth-child(4) article figure div p {
+    position: absolute;
+    color: #FFF;
+    transition: all 0.5s ease;
+    opacity: 0;
+  }
+  section:nth-child(4) article figure div i {
+    top: 2em;
+    right: 2em;
+    font-size: 1.3rem;
+    z-index: 35;
+  }
+  section:nth-child(4) article figure div h3 {
+    bottom: 40%;
+    font-size: 1.6vw;
+    z-index: 40;
+  }
+  section:nth-child(4) article figure div p {
+    bottom: 35%;
+    font-size: 0.9vw;
+    z-index: 45;
+  }
+  section:nth-child(4) article figure div:hover {
+    background-color: hsla(0, 0%, 13%, 0.8);
+  }
+  section:nth-child(4) article figure div:hover i, section:nth-child(4) article figure div:hover h3, section:nth-child(4) article figure div:hover p {
+    opacity: 1;
+  }
+  section:nth-child(4) a {
+    color: #202020;
+    border: 2px solid hsla(0, 0%, 13%, 0.1);
+    padding: 1em 1.5em;
+    transition: all 0.3s ease;
+  }
+  section:nth-child(4) a i {
+    color: #202020;
+    margin-left: 1em;
+  }
+  section:nth-child(4) a:hover {
+    border-color: #202020;
+  }
+}
 section:nth-child(2) {
   min-height: 100vh;
   position: relative;
