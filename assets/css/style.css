@@ -953,6 +953,114 @@ section:nth-child(6) .blog_p_date, section:nth-child(6) .blog_cite_author {
   width: 75px;
 }
 
+@media screen and (max-width 1000px) {
+  .nowrap {
+    white-space: nowrap;
+  }
+  .center {
+    text-align: center;
+  }
+  /* || GENERAL STYLES */
+  section:nth-child(6) {
+    background-color: #fefefe;
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+  }
+  section:nth-child(6) h2 {
+    letter-spacing: 0.1em;
+    font-size: 3rem;
+    margin-top: 10vh;
+    margin-bottom: 2vh;
+  }
+  section:nth-child(6) .blog_p_description {
+    font-family: "Playfair Display", serif;
+    font-weight: 400;
+    font-size: 0.7rem;
+  }
+  section:nth-child(6) .blog_p, section:nth-child(6) .blog_a_readmore {
+    font-family: "Helvetica", sans-serif;
+    font-size: 0.7rem;
+  }
+  section:nth-child(6) .blog_p_date, section:nth-child(6) .blog_cite_author {
+    font-size: 0.8rem;
+    font-family: "Helvetica", sans-serif;
+  }
+  .blog_div {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    gap: 2em;
+  }
+  .blog_article {
+    width: 300px;
+    background-color: #faf6f0;
+    padding-bottom: 1em;
+  }
+  .blog_figure {
+    width: 300px;
+    height: auto;
+  }
+  .blog_img.picture {
+    width: 100%;
+    height: auto;
+  }
+  .blog_span {
+    display: flex;
+    align-items: center;
+    padding-left: 1.5em;
+    padding-top: 1em;
+  }
+  .blog_cite_author, .blog_p_date {
+    margin: auto 2em auto 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-style: normal;
+  }
+  .blog_p_description {
+    padding-left: 1.5em;
+    margin-top: 1em;
+  }
+  .blog_a_readmore {
+    display: inline-block;
+    margin: 1em 0 1em 1.5em;
+    color: #000;
+    background-color: #FFF;
+    padding: 1em 1.5em;
+    transition: all 0.3s ease;
+  }
+  .blog_a_readmore i {
+    margin-left: 0.5em;
+  }
+  .blog_a_readmore:hover {
+    background-color: #c8a96a;
+    color: #FFF;
+  }
+  .blog_a_readmore:hover i {
+    color: #FFF;
+  }
+  .blog_ul {
+    display: flex;
+    justify-content: space-evenly;
+    filter: saturate(0);
+    margin: 0 10vw;
+    gap: 5vw;
+  }
+  .blog_li {
+    margin: auto;
+  }
+  .brand {
+    width: 75px;
+  }
+}
 footer {
   width: 100%;
   display: flex;
