@@ -74,7 +74,7 @@ section:nth-child(2) {
 			gap: 2em;
 			
 			p {
-				font-size: 1.8vw;
+				font-size: 1.8rem;
 				font-family: 'Playfair Display', serif;
 				letter-spacing: 0.05em;
 				line-height: 2.2em;
@@ -85,7 +85,7 @@ section:nth-child(2) {
 				background: $aHover;
 				color: $white;
 				border-radius: 5px;
-				font-size: 0.8vw;
+				font-size: 0.8rem;
 				font-weight: 800;
 				transition: all .3s ease;
 				
@@ -104,5 +104,116 @@ section:nth-child(2) {
 	&>p:last-child {
 		top: unset;
 		bottom: 45vw;
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	section:nth-child(2) {
+		min-height: 100vh;
+		position: relative;
+		@include flexColumn();
+		align-items: center;
+		justify-content: flex-end;
+		padding-bottom: 15vh;
+		
+		h2 {
+			margin-bottom: 0.5em;
+			margin-top: 50vw;
+		}
+		
+		div:first-child {
+			position: absolute;
+			top: -10vh;
+			left: 0;
+			width: 100%;
+			@include flexRowCenter();
+			
+			figure:nth-child(1) {
+				
+				img {
+					width: 15vw;
+				}
+			}
+			
+			figure:nth-child(3) {
+				
+				img {
+					width: 20vw;
+				}
+			}
+			
+			figure:nth-child(2) {
+				
+				img {
+					
+					width: 35vw;
+					border-radius: 50vw;
+					border: 2vw solid $white;
+				}
+			}
+		}
+		
+		figure:nth-child(4) {
+			position: absolute;
+			right: 10vw;
+			bottom: 85vh;
+			
+			img {
+				width: 10vw;
+			}
+		}
+		
+		div:nth-child(5) {
+			width: 70%;
+			@include flexRowCenterFlexStart();
+			gap: 5em;
+			margin-top: 15vh;
+			
+			figure {
+				width: 30vw;
+				
+				img {
+					width: 100%;
+				}
+			}
+			
+			article {
+				width: 50vw;
+				height: 100%;
+				@include flexColumnCenterFlexStart();
+				gap: 2em;
+				
+				p {
+					font-size: 1.8rem;
+					font-family: 'Playfair Display', serif;
+					letter-spacing: 0.05em;
+					line-height: 2.2em;
+				}
+				
+				a {
+					padding: 1.5em 2.5em;
+					background: $aHover;
+					color: $white;
+					border-radius: 5px;
+					font-size: 0.8rem;
+					font-weight: 800;
+					transition: all .3s ease;
+					
+					i {
+						color: $white;
+						margin-left: 0.5em;
+					}
+					
+					&:hover {
+						background: hsla(40, 46%, 60%, 0.5);
+					}
+				}
+			}
+		}
+		
+		&>p:last-child {
+			top: unset;
+			bottom: 45vw;
+		}
 	}
 }

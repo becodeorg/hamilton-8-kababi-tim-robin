@@ -26,3 +26,35 @@ section:nth-child(5) {
 		}
 	}
 }
+
+@media screen and (max-width: 1000px) {
+	section:nth-child(5) {
+		background: $background;
+		@include flexColumnCenter();
+		padding: 20vh 0;
+		
+		h2, p {
+			color: $white;
+		}
+		
+		h2 {
+			margin-bottom: 2vh;
+		}
+		
+		article {
+			width: 70%;
+			@include flexRowCenter();
+			flex-wrap: wrap;
+			gap: 2em;
+			margin-top: 10vh;
+			
+			figure {
+				
+				img {
+					width: 220px;
+				}
+			}
+		}
+	}
+	
+}
