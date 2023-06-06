@@ -117,9 +117,3 @@ body > main > section:nth-child(3) > p:nth-child(6) {
     z-index: 0;
     font-family: 'Playfair Display', serif; 
 }
-
-@media screen and (max-width: 640px) {
-    body > main > section:nth-child(3) .menu {
-        width: 80vw;
-    }
-}

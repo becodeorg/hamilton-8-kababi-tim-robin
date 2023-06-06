@@ -9,17 +9,3 @@ h1, h2, h3, section:first-child article a, section p:last-child, a p {
 h2 {
 	font-size: 3vw;
 }
-
-@font-face {
-	font-family: 'flaticon';
-	src: url('../font/flaticon.ttf') format('truetype');
-}
-
-[data-icon]:before {
-	font-family: 'flaticon';
-	content: attr(data-icon);
-	font-weight: normal;
-	line-height: 1;
-	
-	-webkit-font-smoothing: antialiased;
-}
