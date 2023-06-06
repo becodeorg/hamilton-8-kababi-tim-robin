@@ -953,7 +953,7 @@ section:nth-child(6) .blog_p_date, section:nth-child(6) .blog_cite_author {
   width: 75px;
 }
 
-@media screen and (max-width 1000px) {
+@media screen and (max-width: 1000px) {
   .nowrap {
     white-space: nowrap;
   }
