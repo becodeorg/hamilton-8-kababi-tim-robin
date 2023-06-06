@@ -9,6 +9,14 @@ footer {
 	color: hsla(0, 0%, 100%, 0.5);
 	padding: 5vh 5%;
 	
+	h2 {
+		figure {
+			img {
+				width: 10vw;
+			}
+		}
+	}
+	
 	article {
 		width: 100%;
 		@include flexRowCenter();
@@ -16,13 +24,6 @@ footer {
 		gap: 5vw;
 		padding: 2vh 0;
 		
-		h2 {
-			figure {
-				img {
-					width: 20vw;
-				}
-			}
-		}
 		
 		p, li {
 			font-size: 0.8vw;
@@ -172,6 +173,49 @@ footer {
 						&:hover {
 							background: $aHoverBackground;
 						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	footer {
+		h2 {
+			figure {
+				img {
+					width: 40vw;
+				}
+			}
+		}
+		
+		article {
+			ul {
+				gap: 0.7em;
+				
+				li {
+					font-size: 0.8em;
+					line-height: 2em;
+					
+					h3 {
+						font-size: 1.3em;
+					}
+				}
+				
+				address {
+					gap: 1em;
+				}
+			}
+			ul:nth-child(3) {
+				
+				input {
+					font-size: 1.3em;
+					padding: 1em 1.5em;
+				}
+				button {
+					i {
+						font-size: 1.5em;
 					}
 				}
 			}

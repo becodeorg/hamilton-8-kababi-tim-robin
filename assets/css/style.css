@@ -36,6 +36,10 @@ h1, h2, h3, section:first-child article a, section p:last-child, a p {
 
 h2 {
   font-size: 3vw;
+  text-align: center;
+}
+h2 ~ p {
+  font-size: 1.5vw;
 }
 
 /* import dossier utils */
@@ -189,7 +193,8 @@ header article:nth-child(1) div a:nth-child(2):hover i {
   color: #c7a86a;
 }
 header article:nth-child(2) {
-  width: calc(100% - 10rem);
+  height: 100%;
+  width: 100%;
   margin-top: 5vw;
   margin-left: 10vw;
 }
@@ -212,6 +217,7 @@ header article:nth-child(2) div figure img {
   height: auto;
 }
 header article:nth-child(2) div a {
+  margin-top: 2vw;
   color: #fff;
   padding: 1em 2em;
   border: 1px solid hsla(0, 0%, 100%, 0.4);
@@ -222,6 +228,41 @@ header article:nth-child(2) div a:hover {
   background: hsla(0, 0%, 100%, 0.4);
 }
 
+@media screen and (max-width: 1000px) {
+  header {
+    padding: 3em 5em;
+  }
+  header article:nth-child(1) h2 img {
+    width: 10em;
+  }
+  header article:nth-child(1) menu ul li a {
+    font-size: 4em;
+    padding: 2rem 0 !important;
+  }
+  header article:nth-child(1) menu ul li a i {
+    font-size: 1em;
+  }
+  header article:nth-child(1) div a:first-child {
+    font-size: 1.5em;
+  }
+  header article:nth-child(1) div a:first-child img {
+    width: 1em;
+  }
+  header article:nth-child(1) div a:last-child {
+    font-size: 1.5em;
+    padding: 1em 1.5em;
+  }
+  header article:nth-child(2) div h1 {
+    font-size: 4.5em;
+  }
+  header article:nth-child(2) div img {
+    width: 3rem;
+  }
+  header article:nth-child(2) div a {
+    margin-top: 2em;
+    font-size: 1em;
+  }
+}
 body {
   width: 100vw;
   min-height: 100vh;
@@ -248,37 +289,25 @@ section:nth-child(5) article {
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 2em;
+  gap: 2vw;
   margin-top: 10vh;
 }
 section:nth-child(5) article figure img {
-  width: 220px;
+  width: 15vw;
 }
 
 @media screen and (max-width: 1000px) {
-  section:nth-child(5) {
-    background: #090d0f;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 20vh 0;
+  section:nth-child(5) h2 {
+    font-size: 2em;
   }
-  section:nth-child(5) h2, section:nth-child(5) p {
-    color: #FFF;
+  section:nth-child(5) h2 ~ p {
+    font-size: 1.5rem;
   }
   section:nth-child(5) h2 {
-    margin-bottom: 2vh;
+    margin-bottom: 2em;
   }
   section:nth-child(5) article {
-    width: 70%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
     gap: 2em;
-    margin-top: 10vh;
   }
   section:nth-child(5) article figure img {
     width: 220px;
@@ -300,9 +329,12 @@ section:nth-child(4) article {
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 2em;
+  gap: 2vw;
   margin-top: 20vh;
   margin-bottom: 10vh;
+}
+section:nth-child(4) article figure:nth-child(1) img, section:nth-child(4) article figure:nth-child(6) img {
+  width: 35vw;
 }
 section:nth-child(4) article figure {
   position: relative;
@@ -310,6 +342,7 @@ section:nth-child(4) article figure {
 section:nth-child(4) article figure img {
   position: relative;
   z-index: 30;
+  width: 16.7vw;
 }
 section:nth-child(4) article figure div {
   width: 100%;
@@ -355,8 +388,9 @@ section:nth-child(4) article figure div:hover i, section:nth-child(4) article fi
 section:nth-child(4) a {
   color: #202020;
   border: 2px solid hsla(0, 0%, 13%, 0.1);
-  padding: 1em 1.5em;
+  padding: 1vw 1.5vw;
   transition: all 0.3s ease;
+  font-size: 1.5vw;
 }
 section:nth-child(4) a i {
   color: #202020;
@@ -368,85 +402,27 @@ section:nth-child(4) a:hover {
 
 @media screen and (max-width: 1000px) {
   section:nth-child(4) {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    z-index: 30;
-    padding: 20vh 0;
+    padding-top: 8em;
+    padding-bottom: 5em;
+  }
+  section:nth-child(4) h2 {
+    font-size: 2em;
+  }
+  section:nth-child(4) h2 ~ p {
+    font-size: 1.5rem;
   }
   section:nth-child(4) article {
-    width: 80%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
     gap: 2em;
-    margin-top: 20vh;
-    margin-bottom: 10vh;
-  }
-  section:nth-child(4) article figure {
-    position: relative;
-  }
-  section:nth-child(4) article figure img {
-    position: relative;
-    z-index: 30;
-  }
-  section:nth-child(4) article figure div {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 30;
-    transition: all 0.5s ease;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  section:nth-child(4) article figure div i, section:nth-child(4) article figure div h3, section:nth-child(4) article figure div p {
-    position: absolute;
-    color: #FFF;
-    transition: all 0.5s ease;
-    opacity: 0;
   }
   section:nth-child(4) article figure div i {
-    top: 2em;
-    right: 2em;
     font-size: 1.3rem;
-    z-index: 35;
-  }
-  section:nth-child(4) article figure div h3 {
-    bottom: 40%;
-    font-size: 1.6vw;
-    z-index: 40;
-  }
-  section:nth-child(4) article figure div p {
-    bottom: 35%;
-    font-size: 0.9vw;
-    z-index: 45;
-  }
-  section:nth-child(4) article figure div:hover {
-    background-color: hsla(0, 0%, 13%, 0.8);
-  }
-  section:nth-child(4) article figure div:hover i, section:nth-child(4) article figure div:hover h3, section:nth-child(4) article figure div:hover p {
-    opacity: 1;
   }
   section:nth-child(4) a {
-    color: #202020;
-    border: 2px solid hsla(0, 0%, 13%, 0.1);
+    font-size: 1rem;
     padding: 1em 1.5em;
-    transition: all 0.3s ease;
   }
   section:nth-child(4) a i {
-    color: #202020;
     margin-left: 1em;
-  }
-  section:nth-child(4) a:hover {
-    border-color: #202020;
   }
 }
 section:nth-child(2) {
@@ -501,6 +477,10 @@ section:nth-child(2) div:nth-child(5) {
   margin-top: 15vh;
 }
 section:nth-child(2) div:nth-child(5) figure {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
   width: 30vw;
 }
 section:nth-child(2) div:nth-child(5) figure img {
@@ -516,7 +496,7 @@ section:nth-child(2) div:nth-child(5) article {
   gap: 2em;
 }
 section:nth-child(2) div:nth-child(5) article p {
-  font-size: 1.8rem;
+  font-size: 1.8vw;
   font-family: "Playfair Display", serif;
   letter-spacing: 0.05em;
   line-height: 2.2em;
@@ -526,7 +506,7 @@ section:nth-child(2) div:nth-child(5) article a {
   background: #c7a86a;
   color: #FFF;
   border-radius: 5px;
-  font-size: 0.8rem;
+  font-size: 0.8vw;
   font-weight: 800;
   transition: all 0.3s ease;
 }
@@ -543,97 +523,26 @@ section:nth-child(2) > p:last-child {
 }
 
 @media screen and (max-width: 1000px) {
-  section:nth-child(2) {
-    min-height: 100vh;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-end;
-    padding-bottom: 15vh;
+  section:nth-child(2) > h2 {
+    font-size: 2.5em;
   }
-  section:nth-child(2) h2 {
-    margin-bottom: 0.5em;
-    margin-top: 50vw;
-  }
-  section:nth-child(2) div:first-child {
-    position: absolute;
-    top: -10vh;
-    left: 0;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-  }
-  section:nth-child(2) div:first-child figure:nth-child(1) img {
-    width: 15vw;
-  }
-  section:nth-child(2) div:first-child figure:nth-child(3) img {
-    width: 20vw;
-  }
-  section:nth-child(2) div:first-child figure:nth-child(2) img {
-    width: 35vw;
-    border-radius: 50vw;
-    border: 2vw solid #FFF;
-  }
-  section:nth-child(2) figure:nth-child(4) {
-    position: absolute;
-    right: 10vw;
-    bottom: 85vh;
-  }
-  section:nth-child(2) figure:nth-child(4) img {
-    width: 10vw;
+  section:nth-child(2) > h2 ~ p {
+    font-size: 1.5rem;
   }
   section:nth-child(2) div:nth-child(5) {
-    width: 70%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 5em;
-    margin-top: 15vh;
+    flex-direction: column;
   }
   section:nth-child(2) div:nth-child(5) figure {
-    width: 30vw;
+    width: 90vw;
   }
   section:nth-child(2) div:nth-child(5) figure img {
-    width: 100%;
-  }
-  section:nth-child(2) div:nth-child(5) article {
-    width: 50vw;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    gap: 2em;
+    width: 80%;
   }
   section:nth-child(2) div:nth-child(5) article p {
-    font-size: 1.8rem;
-    font-family: "Playfair Display", serif;
-    letter-spacing: 0.05em;
-    line-height: 2.2em;
+    font-size: 1rem;
   }
   section:nth-child(2) div:nth-child(5) article a {
-    padding: 1.5em 2.5em;
-    background: #c7a86a;
-    color: #FFF;
-    border-radius: 5px;
     font-size: 0.8rem;
-    font-weight: 800;
-    transition: all 0.3s ease;
-  }
-  section:nth-child(2) div:nth-child(5) article a i {
-    color: #FFF;
-    margin-left: 0.5em;
-  }
-  section:nth-child(2) div:nth-child(5) article a:hover {
-    background: hsla(40, 46%, 60%, 0.5);
-  }
-  section:nth-child(2) > p:last-child {
-    top: unset;
-    bottom: 45vw;
   }
 }
 section {
@@ -774,6 +683,13 @@ section:nth-child(1) article a:hover i {
 }
 
 @media screen and (max-width: 1200px) {
+  section:nth-child(1) > h2 {
+    font-size: 2.5em;
+  }
+  section:nth-child(1) > h2 ~ p {
+    font-size: 1.5rem;
+    margin-bottom: 5em;
+  }
   section:nth-child(1) article a {
     width: 200px;
     height: 240px;
@@ -827,7 +743,7 @@ body > main > section:nth-child(3) .menu {
   display: flex;
   flex-wrap: nowrap;
   margin: 0;
-  padding: 2rem;
+  padding: 2vw;
 }
 body > main > section:nth-child(3) .menu div {
   display: flex;
@@ -896,113 +812,23 @@ body > main > section:nth-child(3) > p:nth-child(6) {
 }
 
 @media screen and (max-width: 1000px) {
-  body > main > section:nth-child(3) {
-    width: 100vw;
-    min-height: 100vh;
-    background-color: #faf6f0;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 3rem 0;
-    /* PAIN */
-    /* STEAK  */
-  }
   body > main > section:nth-child(3) h2 {
-    font-size: 2rem;
-    margin-bottom: 2rem;
-    position: relative;
-    z-index: 2;
-    font-weight: 400;
+    font-size: 2.5em;
   }
-  body > main > section:nth-child(3) p {
-    position: relative;
-    font-size: 1rem;
-    color: rgb(90, 90, 90);
-    z-index: 3;
-  }
-  body > main > section:nth-child(3) article {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    z-index: 10;
-    position: relative;
-    gap: 2em;
-    padding: 3em;
-  }
-  body > main > section:nth-child(3) .menu {
-    width: 40vw;
-    border: 2px dashed transparent;
-    display: flex;
-    flex-wrap: nowrap;
-    margin: 0;
-    padding: 2rem;
-  }
-  body > main > section:nth-child(3) .menu div {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-  }
-  body > main > section:nth-child(3) .menu:hover {
-    border: 2px dashed #c7a86a;
-  }
-  body > main > section:nth-child(3) figure:nth-child(5) {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 30vw;
-    height: 100vh;
-    z-index: 0;
-  }
-  body > main > section:nth-child(3) figure:nth-child(5) img {
-    width: auto;
-    height: 100vh;
-    z-index: -1;
-  }
-  body > main > section:nth-child(3) figure:nth-child(4) {
-    position: absolute;
-    bottom: -10vh;
-    left: 0;
-    width: 20vw;
-    height: 50vh;
-    z-index: 0;
-  }
-  body > main > section:nth-child(3) figure:nth-child(4) img {
-    width: auto;
-    height: 55vh;
-    z-index: -1;
-  }
-  body > main > section:nth-child(3) > article > div {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 492px;
-    padding: 0 2rem;
-    background-color: #fff;
-    border-radius: 5px;
-    margin-bottom: 1rem;
-  }
-  body > main > section:nth-child(3) > article > div h3 {
+  body > main > section:nth-child(3) h2 ~ p {
     font-size: 1.5rem;
   }
-  body > main > section:nth-child(3) > article > div .price {
-    margin-left: 3em;
-    font-size: 2rem;
-    color: #c7a86a;
+  body > main > section:nth-child(3) article div.menu {
+    padding: 2rem;
   }
-  .menu > div > p {
-    text-align: left;
-    width: 100%;
-    font-size: 0.7rem;
+  body > main > section:nth-child(3) article div.menu h3 {
+    font-size: 1.5em;
   }
-  body > main > section:nth-child(3) > p:nth-child(6) {
-    z-index: 0;
-    font-family: "Playfair Display", serif;
+  body > main > section:nth-child(3) article div.menu .price {
+    font-size: 2em;
+  }
+  body > main > section:nth-child(3) article div.menu div p {
+    font-size: 0.7em;
   }
 }
 .nowrap {
@@ -1022,10 +848,10 @@ section:nth-child(6) {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 2em;
+  gap: 2vw;
 }
 section:nth-child(6) h2 {
-  letter-spacing: 0.1em;
+  letter-spacing: 0.1vw;
   font-size: 3vw;
   margin-top: 10vh;
   margin-bottom: 2vh;
@@ -1050,17 +876,17 @@ section:nth-child(6) .blog_p_date, section:nth-child(6) .blog_cite_author {
   flex-direction: row;
   justify-content: center;
   width: 100%;
-  gap: 2em;
+  gap: 2vw;
 }
 
 .blog_article {
-  width: 300px;
+  width: 25vw;
   background-color: #faf6f0;
-  padding-bottom: 1em;
+  padding-bottom: 1vw;
 }
 
 .blog_figure {
-  width: 300px;
+  width: 100%;
   height: auto;
 }
 
@@ -1073,7 +899,7 @@ section:nth-child(6) .blog_p_date, section:nth-child(6) .blog_cite_author {
   display: flex;
   align-items: center;
   padding-left: 1.5em;
-  padding-top: 1em;
+  padding-top: 1vw;
 }
 
 .blog_cite_author, .blog_p_date {
@@ -1092,14 +918,14 @@ section:nth-child(6) .blog_p_date, section:nth-child(6) .blog_cite_author {
 
 .blog_a_readmore {
   display: inline-block;
-  margin: 1em 0 1em 1.5em;
+  margin: 1em 0 1vw 1.5vw;
   color: #000;
   background-color: #FFF;
-  padding: 1em 1.5em;
+  padding: 1vw 1.5vw;
   transition: all 0.3s ease;
 }
 .blog_a_readmore i {
-  margin-left: 0.5em;
+  margin-left: 0.5vw;
 }
 .blog_a_readmore:hover {
   background-color: #c8a96a;
@@ -1120,114 +946,56 @@ section:nth-child(6) .blog_p_date, section:nth-child(6) .blog_cite_author {
 .blog_li {
   margin: auto;
 }
+.blog_li img {
+  width: 10vw;
+}
 
 .brand {
-  width: 75px;
+  width: 2vw;
 }
 
 @media screen and (max-width: 1000px) {
-  .nowrap {
-    white-space: nowrap;
-  }
-  .center {
-    text-align: center;
-  }
-  /* || GENERAL STYLES */
   section:nth-child(6) {
-    background-color: #fefefe;
-    width: 100vw;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     gap: 2em;
   }
   section:nth-child(6) h2 {
     letter-spacing: 0.1em;
     font-size: 3rem;
-    margin-top: 10vh;
-    margin-bottom: 2vh;
+  }
+  section:nth-child(6) h2 ~ p {
+    font-size: 1.5rem;
   }
   section:nth-child(6) .blog_p_description {
-    font-family: "Playfair Display", serif;
-    font-weight: 400;
     font-size: 0.7rem;
   }
   section:nth-child(6) .blog_p, section:nth-child(6) .blog_a_readmore {
-    font-family: "Helvetica", sans-serif;
     font-size: 0.7rem;
   }
   section:nth-child(6) .blog_p_date, section:nth-child(6) .blog_cite_author {
     font-size: 0.8rem;
-    font-family: "Helvetica", sans-serif;
   }
   .blog_div {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: center;
-    width: 100%;
     gap: 2em;
   }
   .blog_article {
-    width: 300px;
-    background-color: #faf6f0;
     padding-bottom: 1em;
-  }
-  .blog_figure {
-    width: 300px;
-    height: auto;
-  }
-  .blog_img.picture {
-    width: 100%;
-    height: auto;
+    width: 90vw;
   }
   .blog_span {
-    display: flex;
-    align-items: center;
-    padding-left: 1.5em;
     padding-top: 1em;
   }
   .blog_cite_author, .blog_p_date {
     margin: auto 2em auto 0;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    font-style: normal;
-  }
-  .blog_p_description {
-    padding-left: 1.5em;
-    margin-top: 1em;
   }
   .blog_a_readmore {
-    display: inline-block;
     margin: 1em 0 1em 1.5em;
-    color: #000;
-    background-color: #FFF;
     padding: 1em 1.5em;
-    transition: all 0.3s ease;
   }
   .blog_a_readmore i {
     margin-left: 0.5em;
   }
-  .blog_a_readmore:hover {
-    background-color: #c8a96a;
-    color: #FFF;
-  }
-  .blog_a_readmore:hover i {
-    color: #FFF;
-  }
   .blog_ul {
-    display: flex;
-    justify-content: space-evenly;
-    filter: saturate(0);
-    margin: 0 10vw;
-    gap: 5vw;
-  }
-  .blog_li {
-    margin: auto;
+    gap: 2em;
   }
   .brand {
     width: 75px;
@@ -1244,6 +1012,9 @@ footer {
   color: hsla(0, 0%, 100%, 0.5);
   padding: 5vh 5%;
 }
+footer h2 figure img {
+  width: 10vw;
+}
 footer article {
   width: 100%;
   display: flex;
@@ -1253,9 +1024,6 @@ footer article {
   flex-wrap: wrap;
   gap: 5vw;
   padding: 2vh 0;
-}
-footer article h2 figure img {
-  width: 20vw;
 }
 footer article p, footer article li {
   font-size: 0.8vw;
@@ -1387,6 +1155,31 @@ footer article:last-child ul li i:hover {
   background: #c8a96a;
 }
 
+@media screen and (max-width: 1000px) {
+  footer h2 figure img {
+    width: 40vw;
+  }
+  footer article ul {
+    gap: 0.7em;
+  }
+  footer article ul li {
+    font-size: 0.8em;
+    line-height: 2em;
+  }
+  footer article ul li h3 {
+    font-size: 1.3em;
+  }
+  footer article ul address {
+    gap: 1em;
+  }
+  footer article ul:nth-child(3) input {
+    font-size: 1.3em;
+    padding: 1em 1.5em;
+  }
+  footer article ul:nth-child(3) button i {
+    font-size: 1.5em;
+  }
+}
 @media screen and (max-width: 1400px) {
   header article:nth-child(1) menu {
     gap: 10vw;
@@ -1499,9 +1292,6 @@ footer article:last-child ul li i:hover {
   }
 }
 @media screen and (max-width: 1000px) {
-  section:nth-child(4) article figure div {
-    gap: 2em;
-  }
   section:nth-child(4) article figure div h3 {
     font-size: 1.5em;
   }

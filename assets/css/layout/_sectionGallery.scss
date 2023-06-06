@@ -8,9 +8,16 @@ section:nth-child(4) {
 		width: 80%;
 		@include flexRowCenter();
 		flex-wrap: wrap;
-		gap: 2em;
+		gap: 2vw;
 		margin-top: 20vh;
 		margin-bottom: 10vh;
+		
+		figure:nth-child(1), figure:nth-child(6) {
+			
+			img {
+				width: 35vw;
+			}
+		}
 		
 		figure {
 			position: relative;
@@ -18,6 +25,7 @@ section:nth-child(4) {
 			img {
 				position: relative;
 				z-index: 30;
+				width: 16.7vw;
 			}
 			
 			div {
@@ -66,8 +74,9 @@ section:nth-child(4) {
 	a {
 		color: $textCategory;
 		border: 2px solid hsla(0, 0%, 13%, 0.1);
-		padding: 1em 1.5em;
+		padding: 1vw 1.5vw;
 		transition: all .3s ease;
+		font-size: 1.5vw;
 		
 		i {
 			color: $textCategory;
@@ -82,83 +91,31 @@ section:nth-child(4) {
 
 @media screen and (max-width: 1000px) {
 	section:nth-child(4) {
-		@include flexColumnCenter();
-		position: relative;
-		z-index: 30;
-		padding: 20vh 0;
+		padding-top: 8em;
+		padding-bottom: 5em;
+		
+		h2 {
+			font-size: 2em;
+			&~p { font-size: 1.5rem }
+		}
 		
 		article {
-			width: 80%;
-			@include flexRowCenter();
-			flex-wrap: wrap;
 			gap: 2em;
-			margin-top: 20vh;
-			margin-bottom: 10vh;
-			
 			figure {
-				position: relative;
-				
-				img {
-					position: relative;
-					z-index: 30;
-				}
-				
 				div {
-					width: 100%;
-					height: 100%;
-					position: absolute;
-					top: 0;
-					left: 0;
-					z-index: 30;
-					transition: all .5s ease;
-					@include flexColumnCenter();
-					
-					i, h3, p {
-						position: absolute;
-						color: $white;
-						transition: all .5s ease;
-						opacity: 0;
-					}
-					
 					i {
-						top: 2em;
-						right: 2em;
 						font-size: 1.3rem;
-						z-index: 35;
-					}
-					
-					h3 {
-						@include positioning(40%, 1.6vw, 40);
-					}
-					
-					p {
-						@include positioning(35%, 0.9vw, 45);
-					}
-					
-					&:hover {
-						background-color: hsla(0, 0%, 13%, 0.8);
-						
-						& i, & h3, & p {
-							opacity: 1;
-						}
 					}
 				}
 			}
 		}
 		
 		a {
-			color: $textCategory;
-			border: 2px solid hsla(0, 0%, 13%, 0.1);
+			font-size: 1rem;
 			padding: 1em 1.5em;
-			transition: all .3s ease;
 			
 			i {
-				color: $textCategory;
 				margin-left: 1em;
-			}
-			
-			&:hover {
-				border-color: $textCategory;
 			}
 		}
 	}
